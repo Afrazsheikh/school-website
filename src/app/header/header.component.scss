@@ -1,7 +1,7 @@
+
 header {
   .vision {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     position: absolute;
     top: auto;
@@ -11,7 +11,6 @@ header {
 
     fa-icon {
       min-width: 36px;
-      height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,6 +23,41 @@ header {
 
     fa-icon, p {
       border: 1px solid;
+    }
+  }
+}
+
+/**** Media Query Styles Overrides ****/
+@media (max-width: 1200px) {
+  header {
+    .vision {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    .vision {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      fa-icon {
+        height: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  header {
+    .vision {
+      flex-direction: column;
+
+      fa-icon {
+        height: 36px;
+      }
     }
   }
 }

@@ -1,41 +1,126 @@
 <section>
   <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <h1 class="swiper-title">School of your time</h1>
-        <button type="button" class="btn btn-primary swiper-btn">
-          MORE
-        </button>
-      </div>
-      <div class="col-8">
-        <div class="swiper-container">
-          <div class="rhombus-inner">
-            <div class="image-wrapper resp-img">
-              <img src="assets/images/swiper1.jpg" alt="">
-            </div>
-            <a class="rhomb-text">
-              <div class="rhomb-logo">
-                <img src="assets/images/swiper-logo.png" alt="">
-              </div>
-            </a>
-            <div class="rhombus-image">
-              <div class="rhomb-image-wrapper resp-img">
-                <img src="assets/images/swiper-rhomb1.png" alt="">
+    <swiper #swiper [slidesPerView]="1" effect="fade" [config]="config">
+      <ng-template swiperSlide>
+        <div class="row" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+          <div class="col-4">
+            <h1 class="swiper-title" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              School of your time
+            </h1>
+            <button type="button" class="btn btn-primary swiper-btn" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              MORE
+            </button>
+          </div>
+          <div class="col-8">
+            <div class="swiper-container">
+              <div class="rhombus-inner">
+                <div class="image-wrapper resp-img">
+                  <img src="assets/images/swiper1.jpg" alt="">
+                </div>
+                <a class="rhomb-text">
+                  <div class="rhomb-logo">
+                    <img src="assets/images/swiper-logo.png" alt="">
+                  </div>
+                </a>
+                <div class="rhombus-image">
+                  <div class="rhomb-image-wrapper resp-img">
+                    <img src="assets/images/swiper-rhomb1.png" alt="">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </ng-template>
 
-    <div>
-      <p>
-        Volgograd, st. Tkacheva, d. 7
-        <br>
-        +7 (8442) 39-19-67
-        <br>
-        school_pokolenie@mail.ru
-      </p>
+      <ng-template swiperSlide>
+        <div class="row">
+          <div class="col-4">
+            <h1 class="swiper-title" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              A school you don't want to leave
+            </h1>
+            <button type="button" class="btn btn-primary swiper-btn">
+              MORE
+            </button>
+          </div>
+          <div class="col-8">
+            <div class="swiper-container">
+              <div class="rhombus-inner">
+                <div class="image-wrapper resp-img">
+                  <img src="assets/images/swiper2.jpg" alt="">
+                </div>
+                <a class="rhomb-text">
+                  <div class="rhomb-logo">
+                    <img src="assets/images/swiper-logo.png" alt="">
+                  </div>
+                </a>
+                <div class="rhombus-image">
+                  <div class="rhomb-image-wrapper resp-img">
+                    <img src="assets/images/swiper-rhomb2.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="row">
+          <div class="col-4">
+            <h1 class="swiper-title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              School "Generation" at home
+            </h1>
+            <button type="button" class="btn btn-primary swiper-btn">
+              MORE
+            </button>
+          </div>
+          <div class="col-8">
+            <div class="swiper-container">
+              <div class="rhombus-inner">
+                <div class="image-wrapper resp-img">
+                  <img src="assets/images/swiper3.png" alt="">
+                </div>
+                <a class="rhomb-text">
+                  <div class="rhomb-logo">
+                    <img src="assets/images/swiper-logo.png" alt="">
+                  </div>
+                </a>
+                <div class="rhombus-image">
+                  <div class="rhomb-image-wrapper resp-img">
+                    <img src="assets/images/swiper-rhomb3.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+
+
+    <div class="row">
+      <div class="col">
+        <p>
+          Volgograd, st. Tkacheva, d. 7
+          <br>
+          +7 (8442) 39-19-67
+          <br>
+          school_pokolenie@mail.ru
+        </p>
+      </div>
+
+      <div class="col-md-auto">
+        <button class="swiper-prev btn" type="button" (click)="slidePrev()">
+          <fa-icon [icon]="'arrow-left'"></fa-icon>
+          <span>Previous</span>
+        </button>
+        <button class="swiper-next btn" type="button" (click)="slideNext()">
+          <span>Next</span>
+          <fa-icon [icon]="'arrow-right'"></fa-icon>
+        </button>
+      </div>
+
     </div>
   </div>
 </section>

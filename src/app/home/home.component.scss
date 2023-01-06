@@ -10,8 +10,12 @@
 
   .swiper-btn::after {
     content: '';
-    position: absolute;
-    transform: translate(82px, 3px);
+    position: relative;
+    left: 110%;
+    top: -10px;
+    right: 0;
+    bottom: 0;
+    display: block;
     margin: -4px 0 0 -7px;
     height: 8px;
     width: 37px;
@@ -123,4 +127,38 @@
 
     }
   }
+
+  fa-icon {
+    color: #EA583F;
+  }
+
+  .swiper-prev {
+    fa-icon {
+      margin-right: 8px;
+    }
+
+    /* margin-right: 16px; */
+  }
+
+  .swiper-next {
+    fa-icon {
+      margin-left: 8px;
+    }
+
+    /* margin-left: 16px; */
+  }
+
+  /* .swiper-prev::after {
+    content: '';
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    margin: 0 20px;
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    background-color: #00A0E3;
+  } */
 }

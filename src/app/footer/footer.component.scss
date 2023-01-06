@@ -1,9 +1,10 @@
-.footer {
+footer {
     padding: 25px 0 22px;
     background: #2B2A29;
     color: #fff;
     font-size: 13px;
 }
+
 .wrap {
     max-width: 1190px;
 }
@@ -68,7 +69,7 @@
 }
 .nav-footer__link {
     display: inline-block;
-    font-style: inherit; 
+    font-style: inherit;
     color: #fff;
 
 
@@ -92,4 +93,12 @@ nav-footer__list {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     margin: -10px 0 0 -20px;
+}
+
+footer .nav-footer .nav-footer__link {
+  text-decoration: none;
+}
+
+footer .nav-footer .nav-footer__link:hover {
+  color: #007bff;
 }

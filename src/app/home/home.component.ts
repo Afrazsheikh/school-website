@@ -12,6 +12,9 @@ SwiperCore.use([EffectFade]);
 export class HomeComponent implements OnInit {
 
   config: SwiperOptions = {
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {crossFade: true},
     autoplay: {
       delay: 2500,
       disableOnInteraction: false

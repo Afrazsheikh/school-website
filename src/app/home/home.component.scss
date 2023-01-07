@@ -1,6 +1,9 @@
 .container {
+  .txt-center {
+    text-align: center;
+  }
+
   .swiper-title {
-    font-size: 60px;
     margin: 80px 60px 60px 0;
   }
 
@@ -31,6 +34,8 @@
       padding: 0.48em 0;
       padding-left: 3.05em;
       margin-top: 16px;
+      margin-left: auto;
+      margin-right: auto;
 
       .image-wrapper::before {
         content: '';
@@ -136,29 +141,86 @@
     fa-icon {
       margin-right: 8px;
     }
-
-    /* margin-right: 16px; */
   }
 
   .swiper-next {
     fa-icon {
       margin-left: 8px;
     }
-
-    /* margin-left: 16px; */
   }
+}
 
-  /* .swiper-prev::after {
-    content: '';
-    position: absolute;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    right: auto;
-    margin: 0 20px;
-    display: inline-block;
-    width: 8px;
-    height: 30px;
-    background-color: #00A0E3;
-  } */
+/**** Media Query Styles Overrides ****/
+@media (max-width: 1200px) {
+  .container {
+    .swiper-title {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    .swiper-title {
+      font-size: 60px;
+    }
+  }
+}
+
+/********* For Screens <= 992px ********/
+@media (max-width: 993px) {
+  .container {
+    .swiper-btn::after {
+      left: 105%;
+    }
+
+    .swiper-title {
+      margin: 80px 60px 40px 0;
+    }
+
+    .swiper-btn {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/******* For Screens <= 768px *********/
+@media (max-width: 768px) {
+  .container {
+    .swiper-title {
+      margin: 80px auto 40px;
+      font-size: 40px;
+    }
+  }
+}
+
+/******* For Screens <= 565px *********/
+@media (max-width: 575px) {
+  .container .swiper-container {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    .swiper-container {
+      font-size: 60px;
+    }
+
+    .swiper-title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    .swiper-container {
+      font-size: 50px;
+    }
+
+    .swiper-title {
+      font-size: 30px;
+    }
+  }
 }

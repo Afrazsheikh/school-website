@@ -1,17 +1,9 @@
 <section>
   <div class="container">
-    <swiper #swiper [slidesPerView]="1" effect="fade" [config]="config">
+    <swiper #swiper [config]="config">
       <ng-template swiperSlide>
         <div class="row" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-          <div class="col-4">
-            <h1 class="swiper-title" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              School of your time
-            </h1>
-            <button type="button" class="btn btn-primary swiper-btn" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              MORE
-            </button>
-          </div>
-          <div class="col-8">
+          <div class="col-lg-8 col-md-12 col-sm-12 order-lg-1">
             <div class="swiper-container">
               <div class="rhombus-inner">
                 <div class="image-wrapper resp-img">
@@ -30,20 +22,20 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 txt-center">
+            <h1 class="swiper-title" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              School of your time
+            </h1>
+            <button type="button" class="btn btn-primary swiper-btn" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              MORE
+            </button>
+          </div>
         </div>
       </ng-template>
 
       <ng-template swiperSlide>
         <div class="row">
-          <div class="col-4">
-            <h1 class="swiper-title" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              A school you don't want to leave
-            </h1>
-            <button type="button" class="btn btn-primary swiper-btn">
-              MORE
-            </button>
-          </div>
-          <div class="col-8">
+          <div class="col-lg-8 col-md-12 order-lg-1">
             <div class="swiper-container">
               <div class="rhombus-inner">
                 <div class="image-wrapper resp-img">
@@ -62,20 +54,20 @@
               </div>
             </div>
           </div>
-        </div>
-      </ng-template>
-
-      <ng-template swiperSlide>
-        <div class="row">
-          <div class="col-4">
-            <h1 class="swiper-title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-              School "Generation" at home
+          <div class="col-lg-4 col-md-12 txt-center">
+            <h1 class="swiper-title" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              A school you don't want to leave
             </h1>
             <button type="button" class="btn btn-primary swiper-btn">
               MORE
             </button>
           </div>
-          <div class="col-8">
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="row">
+          <div class="col-lg-8 col-md-12 order-lg-1">
             <div class="swiper-container">
               <div class="rhombus-inner">
                 <div class="image-wrapper resp-img">
@@ -94,13 +86,21 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-12 txt-center">
+            <h1 class="swiper-title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+              School "Generation" at home
+            </h1>
+            <button type="button" class="btn btn-primary swiper-btn">
+              MORE
+            </button>
+          </div>
         </div>
       </ng-template>
     </swiper>
 
 
     <div class="row">
-      <div class="col">
+      <div class="col d-none d-md-block">
         <p>
           Volgograd, st. Tkacheva, d. 7
           <br>
@@ -110,7 +110,7 @@
         </p>
       </div>
 
-      <div class="col-md-auto">
+      <div class="col-md-auto text-center">
         <button class="swiper-prev btn" type="button" (click)="slidePrev()">
           <fa-icon [icon]="'arrow-left'"></fa-icon>
           <span>Previous</span>

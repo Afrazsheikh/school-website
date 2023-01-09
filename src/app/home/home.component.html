@@ -1,4 +1,4 @@
-<section>
+<section class="home-sec1">
   <div class="container">
     <swiper #swiper [config]="config">
       <ng-template swiperSlide>
@@ -100,7 +100,7 @@
 
 
     <div class="row">
-      <div class="col d-none d-md-block">
+      <div class="col d-sm-none d-md-block">
         <p>
           Volgograd, st. Tkacheva, d. 7
           <br>
@@ -129,31 +129,21 @@
   <div class="steps__bg">
 
   </div >
-  <ul class="js-scene parallax-scene steps__decor" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
-  
-  <li class="parallax-layer" data-depth="0.3" style="transform: translate3d(27.9px, -10.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
-  <i class="steps__particle steps__particle--dot-green aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700"></i>
-  </li>
-  </ul>
-  <span class="steps__decor">
-    <i class="steps__particle steps__particle--lines aos-init aos-animate" data-aos="new-animation"  data-aos-delay="200" data-aos-offset="0">
 
-    </i>
-  </span>
   <div class="wrap steps__inner">
     <div class="row text-center text-md-left">
       <div class="col-lg-5">
         <div class="h1 steps__title">
-          <font style="vertical-align: inherit;">
-          <font style="vertical-align: inherit;"> we care</font>
-          </font>
+          <h1>We care</h1>
         </div>
       </div>
       <div class="col-md-9 ml-md-auto ml-lg-0 col-lg-7">
         <div class="steps__text">
-          <font style="vertical-align: inherit;">
-          <font style="vertical-align: inherit;">"Our school gives its pupils the opportunity not only to develop themselves intellectually, aesthetically and physically, but also to find their own direction in life, to receive a quality education."</font>
-          </font>
+          <p class="text-start">
+            Our school gives its pupils the opportunity not only to develop themselves
+            intellectually, aesthetically and physically, but also to find their own direction in life,
+            to receive a quality education.
+          </p>
         </div>
       </div>
     </div>
@@ -161,61 +151,33 @@
       <li class="col-6 col-md-3 steps__item aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
         <div class="text-center item-step">
           <i class="item-step__icon">
-            <img src="assets/images/swiper1.jpg" alt="">
+            <img src="assets/icons/section2-num-step1.svg" alt="">
           </i>
           <div class="d-flex align-items-center justify-content-center item-step__title">
-            <i class="item-step__num">
-              <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">01 </font>
-              </font>
-            </i>
-            <a href="#">
-              <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">Intelligence</font>
-              </font>
-            </a>
+            <i class="item-step__num">01</i>
+            <a href="#">Intelligence</a>
           </div>
         </div>
       </li>
       <li class="col-6 col-md-3 steps__item aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
         <div class="text-center item-step">
           <i class="item-step__icon">
-            <img src="assets/images/swiper1.jpg" alt="">
+            <img src="assets/icons/section2-num-step2.svg" alt="">
           </i>
           <div class="d-flex align-items-center justify-content-center item-step__title">
-            <i class="item-step__num">
-              <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">03
-
-              </font>
-              </font>
-            </i>
-            <a href="#">
-              <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">Creation</font>
-              </font>
-            </a>
+            <i class="item-step__num">02</i>
+            <a href="#">Creativity</a>
           </div>
         </div>
       </li>
       <li class="col-6 col-md-3 steps__item aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
         <div class="text-center item-step">
           <i class="item-step__icon">
-            <img src="assets/images/swiper1.jpg" alt="">
+            <img src="assets/icons/section2-num-step3.svg" alt="">
           </i>
           <div class="d-flex align-items-center justify-content-center item-step__title">
-            <i class="item-step__num">
-              <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">02
-
-              </font>
-              </font>
-            </i>
-            <a href="#">
-              <font class = "abc" style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">HEALTH</font>
-              </font>
-            </a>
+            <i class="item-step__num">03</i>
+            <a href="#">Health</a>
           </div>
         </div>
       </li>
@@ -224,28 +186,16 @@
   </div>
 
   <a class="js-scroll-to steps__scroll-down aos-init aos-animate" href="#" data-aos="fade-up" data-aos-delay="2500" data-scroll-to=".steps" data-aos-offset="0">
-    <i class="fa fa-arrow-down"></i>
-    </a>
-  
+    <fa-icon [className]="'section2-top-arrow'" [icon]="'arrow-down'"></fa-icon>
+  </a>
+
 
 </section>
-  
+
 <!-- section-3 -->
 <section class="section b-mission">
-  <ul class="d-none d-md-block js-scene parallax-scene b-mission__decor" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
-  <li class="parallax-layer"  data-depth="0.2" style="transform: translate3d(-11.7px, 20.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
-  <i class="b-mission__particle b-mission__particle--dot-orange aos-init aos-animate" data-aos="zoom-in" data-aos-delay="800"></i>
-  </li>
-  <li class="parallax-layer"  data-depth="0.3" style="transform: translate3d(27.8px, 10.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
-    <i class="b-mission__particle b-mission__particle--circle-green aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900"></i>
-    </li>
-  
-  </ul>
-  <span class="d-none d-md-block b-mission__decor">
-    <i class="b-mission__particle b-mission__particle--triangle-red aos-init aos-animate" data-aos="zoom-out" data-aos-delay="800"></i>
-  </span>
   <div class="wrap position-relative" >
-    <div class="row align-items-start">
+    <div class="row align-items-start justify-content-between">
       <div class="col-lg-6 col-xl-4 mr-xl-auto">
         <h2 class="h1 aos-init aos-animate" data-aos="fade-up">
           <font style="vertical-align: inherit;">
@@ -253,7 +203,7 @@
         </font>
         </h2>
         <div class="content-style aos-init aos-animate" data-aos="fade-up">
-          <font style="vertical-align: inherit;"> 
+          <font style="vertical-align: inherit;">
             <font style="vertical-align: inherit;" >
             Find an individual approach to each child in accordance with their personal needs and their level of knowledge, cultural characteristics and interests of their families."</font>
           </font>
@@ -266,7 +216,16 @@
               </button>
             </a>
           </div>
+          <a class="responsive-img js-image-popup d-block b-mission__img-wrap aos-init aos-animate" href="assets/images/section3-img.jpg" data-aos="fade-up-right" data-aos-delay="600">
+            <img src="assets/images/section3-img.jpg" alt="">
+          </a>
       </div>
+      <div class="col-lg-6 b-mission__video">
+				<a class="responsive-img js-popup-youtube b-video b-video--dimmed aos-init aos-animate" href="https://www.youtube.com/watch?v=BD_bN7uZ75k" data-aos="fade-up" data-aos-delay="100">
+					<img class="lazyload" data-src="assets/images/section3-video.jpg" alt="" src="assets/images/section3-video.jpg">
+          <fa-icon [style]="{'z-index': '1'}" [className]="'b-video__play-btn'" [icon]="'play'"></fa-icon>
+				</a>
+			</div>
     </div>
   </div>
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
-import { faArrowLeft, faArrowRight, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowLeft, faArrowRight, faEye, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(library: FaIconLibrary)
   {
-    library.addIcons(faEye, faArrowLeft, faArrowRight)
+    library.addIcons(faEye, faArrowLeft, faArrowRight, faArrowDown, faPlay)
   }
 
   ngOnInit(): void {

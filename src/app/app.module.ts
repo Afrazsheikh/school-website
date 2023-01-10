@@ -9,13 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SwiperModule } from 'swiper/angular';
+import { AdmissionComponent } from './admission/admission.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AdmissionComponent
   ],
   imports: [
     BrowserModule,

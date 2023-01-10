@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import SwiperCore, {SwiperOptions, EffectFade} from 'swiper';
+import SwiperCore, {SwiperOptions, EffectFade, Pagination} from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
-SwiperCore.use([EffectFade]);
+SwiperCore.use([EffectFade, Pagination]);
 
 @Component({
   selector: 'app-home',
@@ -19,6 +19,18 @@ export class HomeComponent implements OnInit {
       delay: 2500,
       disableOnInteraction: false
     }
+  }
+
+  config2: SwiperOptions = {
+    direction: 'vertical',
+    autoHeight: true,
+    effect: 'fade',
+    fadeEffect: {crossFade: true},
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: true
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;

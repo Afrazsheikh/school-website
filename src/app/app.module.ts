@@ -10,6 +10,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SwiperModule } from 'swiper/angular';
 import { AdmissionComponent } from './admission/admission.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewsComponent } from './news/news.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,17 @@ import { AdmissionComponent } from './admission/admission.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AdmissionComponent
+    AdmissionComponent,
+    NewsComponent,
+    GalleryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SwiperModule
+    SwiperModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

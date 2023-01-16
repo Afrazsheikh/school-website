@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import SwiperCore, {SwiperOptions, EffectFade, Pagination} from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 SwiperCore.use([EffectFade, Pagination]);
 
@@ -30,14 +31,15 @@ export class HomeComponent implements OnInit {
       delay: 2500,
       disableOnInteraction: false
     },
-    pagination: true
+    pagination: true,
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    //this.testURL();
   }
 
   slideNext(){
@@ -45,6 +47,19 @@ export class HomeComponent implements OnInit {
   }
   slidePrev(){
     this.swiper?.swiperRef.slidePrev(1000);
+  }
+
+  testURL()
+  {
+    const httpHeaders = new HttpHeaders({});
+
+    const options = {
+      headers: httpHeaders
+    }
+
+    this.http.get("https://restaurant-cms-application.herokuapp.com/v1/userService/about-us/63a19d3d27a57d8a6d2e4408")
+    .subscribe(() => {},
+    (err) => {console.error(err)});
   }
 
 }

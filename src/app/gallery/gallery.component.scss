@@ -25,19 +25,19 @@
 
   .eyes_parentDiv,
   .zoom_out {
-      -webkit-transform: scale(0.9);
-      -moz-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      -o-transform: scale(0.9);
-      transform: scale(0.9);
-      transition: all 2s;
-      transition: .3s ease-in-out;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: all 2s;
+    transition: .3s ease-in-out;
   }
 
   .eyes_parentDiv {
-      display: flex;
-      transition: all 4s;
-      transition: .3s ease-in-out;
+    display: flex;
+    transition: all 4s;
+    transition: .3s ease-in-out;
 
   }
 }
@@ -81,43 +81,44 @@
   display: none;
 
   .circle_div {
-      border: 6px solid #fff;
-      width: 6rem;
-      height: 6rem;
+    border: 6px solid #fff;
+    width: 6rem;
+    height: 6rem;
   }
 
   .icon_div {
-      width: 4.5em;
-      height: 4.5em;
-      background: #00A0E3;
+    width: 4.5em;
+    height: 4.5em;
+    background: #00A0E3;
   }
 
   .icon_div .eyes_icon {
-      font-size: 40px;
+    font-size: 40px;
+    color: #fff;
   }
 
 }
 
 @media only screen and (max-width: 768px) {
   .custom_heigth {
-      height: auto;
+    height: auto;
   }
 
   .eyes_parentDiv {
-      .circle_div {
-          width: 5rem;
-          height: 5rem;
-      }
+    .circle_div {
+      width: 5rem;
+      height: 5rem;
+    }
 
-      .icon_div {
-          width: 3.5em;
-          height: 3.5em;
-          background: #00A0E3;
-      }
+    .icon_div {
+      width: 3.5em;
+      height: 3.5em;
+      background: #00A0E3;
+    }
 
-      .icon_div .eyes_icon {
-          font-size: 20px;
-      }
+    .icon_div .eyes_icon {
+      font-size: 20px;
+    }
 
   }
 

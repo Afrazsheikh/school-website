@@ -4,6 +4,7 @@ import { AdmissionComponent } from './admission/admission.component';
 import { CareersComponent } from './careers/careers.component';
 import { ContactComponent } from './contact/contact.component';
 import { EquiryComponent } from './equiry/equiry.component';
+import { FacilityComponent } from './facility/facility.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'equiry', component: EquiryComponent},
   {path: 'careers', component: CareersComponent},
   {path: 'students-corner', component: StudcornerComponent},
+  {path: 'facility', component: FacilityComponent},
 
 
 ];

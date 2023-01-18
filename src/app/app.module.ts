@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EquiryComponent } from './equiry/equiry.component';
 import { CareersComponent } from './careers/careers.component';
 import { StudcornerComponent } from './studcorner/studcorner.component';
+import { FacilityComponent } from './facility/facility.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StudcornerComponent } from './studcorner/studcorner.component';
     ContactComponent,
     EquiryComponent,
     CareersComponent,
-    StudcornerComponent
+    StudcornerComponent,
+    FacilityComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~swiper/swiper-bundle.min.css";
 
+body {
+  counter-reset: myCounter;
+}
+
+fa-icon.swiper-arrow {
+  color: #EA583F;
+}
+
+.swiper-prev {
+  fa-icon {
+    margin-right: 8px;
+  }
+}
+
+.swiper-next {
+  fa-icon {
+    margin-left: 8px;
+  }
+}
 
 /******* Home Section 1 ********/
 .home-sec1 {

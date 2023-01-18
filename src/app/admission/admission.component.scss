@@ -65,7 +65,7 @@
 .stages__item-num:before {
   position: relative;
   z-index: 1;
-  counter-increment: myCounter;
+  counter-increment: myCounter 1;
   content: "0" counter(myCounter);
   font-size: 90px;
   font-weight: 500;
@@ -75,6 +75,10 @@
   width: 500px;
   height: 400px;
   word-wrap: break-word;
+}
+
+.stages__item-text {
+  padding-right: 32px;
 }
 
 .moretext {
@@ -126,8 +130,4 @@
     transform: none !important;
     animation: none !important;
   }
-}
-.limitTextHeight {
-  height: 165px;
-  overflow: hidden;
 }

@@ -26,7 +26,7 @@
             <h1 class="swiper-title" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
               School of your time
             </h1>
-            <button type="button" class="btn btn-primary swipera-btn" data-aos="fade-up-right" data-aos-duration="1000"
+            <button type="button" class="btn btn-primary swiper-btn" data-aos="fade-up-right" data-aos-duration="1000"
               data-aos-easing="ease-in-out">
               MORE
             </button>
@@ -113,12 +113,12 @@
 
       <div class="col-md-auto text-center">
         <button class="swiper-prev btn" type="button" (click)="slidePrev()">
-          <fa-icon [icon]="'arrow-left'"></fa-icon>
+          <fa-icon [className]="'swiper-arrow'" [icon]="'arrow-left'"></fa-icon>
           <span>Previous</span>
         </button>
         <button class="swiper-next btn" type="button" (click)="slideNext()">
           <span>Next</span>
-          <fa-icon [icon]="'arrow-right'"></fa-icon>
+          <fa-icon [className]="'swiper-arrow'" [icon]="'arrow-right'"></fa-icon>
         </button>
       </div>
 
@@ -285,8 +285,8 @@
                 </a>
               </p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
+                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
+                <li class="js-projects-bullet active" data-id="2">Modern High School</li>
                 <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
                 <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
                 <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
@@ -314,9 +314,9 @@
                 </a>
               </p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
+                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
                 <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
+                <li class="js-projects-bullet active" data-id="3">Psychological center "GENERATION"</li>
                 <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
                 <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
                 <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
@@ -337,16 +337,21 @@
               </div>
 
               <p class="mb-4">
+                <br>
+                The Time2Teach project is a new look at school and formal education.
+                A teacher for students should become a guide to life, show how to apply knowledge in practice and teach
+                how to solve real problems, not only educational ones.
+                <br><br>
                 <a class="b-projects__more-link"
                   href="/projects/obrazovatelnyy-tsentr-maksimum-sovremennaya-podgotovka-k-oge-ege/">
                   To learn more
                 </a>
               </p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
+                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
                 <li class="js-projects-bullet" data-id="2">Modern High School</li>
                 <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
+                <li class="js-projects-bullet active" data-id="4">«Time2Teach»</li>
                 <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
                 <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
               </ul>
@@ -372,11 +377,11 @@
                 </a>
               </p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
+                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
                 <li class="js-projects-bullet" data-id="2">Modern High School</li>
                 <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
                 <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
+                <li class="js-projects-bullet active" data-id="5">Endowment Fund Legacy Endowment</li>
                 <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
               </ul>
             </div>
@@ -401,12 +406,12 @@
                 </a>
               </p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
+                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
                 <li class="js-projects-bullet" data-id="2">Modern High School</li>
                 <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
                 <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
                 <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
+                <li class="js-projects-bullet active" data-id="6">Educational center "Maximum"</li>
               </ul>
             </div>
             <div class="col-lg-6">
@@ -417,6 +422,20 @@
           </div>
         </ng-template>
       </swiper>
+    </div>
+
+    <div class="swiper-btns">
+      <button class="btn btn-primary">All Projects</button>
+      <div>
+        <button class="swiper-prev btn" type="button" (click)="slideEduPrev()">
+          <fa-icon [className]="'swiper-arrow'" [icon]="'arrow-left'"></fa-icon>
+          <span>Previous</span>
+        </button>
+        <button class="swiper-next btn" type="button" (click)="slideEduNext()">
+          <span>Next</span>
+          <fa-icon [className]="'swiper-arrow'" [icon]="'arrow-right'"></fa-icon>
+        </button>
+      </div>
     </div>
 
   </div>

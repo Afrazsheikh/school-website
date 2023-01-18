@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  @ViewChild('swiper2', { static: false }) swiper2?: SwiperComponent;
 
   constructor(private http: HttpClient) { }
 
@@ -49,6 +50,13 @@ export class HomeComponent implements OnInit {
   }
   slidePrev(){
     this.swiper?.swiperRef.slidePrev(1000);
+  }
+
+  slideEduNext(){
+    this.swiper2?.swiperRef.slideNext(1000);
+  }
+  slideEduPrev(){
+    this.swiper2?.swiperRef.slidePrev(1000);
   }
 
   testURL()

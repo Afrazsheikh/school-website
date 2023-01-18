@@ -132,22 +132,6 @@
 
     }
   }
-
-  fa-icon {
-    color: #EA583F;
-  }
-
-  .swiper-prev {
-    fa-icon {
-      margin-right: 8px;
-    }
-  }
-
-  .swiper-next {
-    fa-icon {
-      margin-left: 8px;
-    }
-  }
 }
 
 /**** Media Query Styles Overrides ****/
@@ -765,8 +749,8 @@ h6,
 
 @media (min-width: 1200px) {
   .b-mission__img-wrap {
-    bottom: -48px;
-    left: 34%;
+    bottom: 92px;
+    left: 100%;
     right: auto;
   }
 }
@@ -849,7 +833,7 @@ h6,
 }
 
 .sec4-swiper {
-  max-height: 768px;
+  max-height: 600px;
 }
 
 
@@ -1024,11 +1008,6 @@ img {
   box-sizing: border-box;
 }
 
-user agent stylesheet img {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
 .b-projects__dots {
   position: absolute;
   z-index: 1;
@@ -1113,6 +1092,12 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+
+.swiper-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 

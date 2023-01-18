@@ -20,9 +20,35 @@
                 Interview or testing
               </div>
               <div class="stages__item-text">
-                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
-                <button type="button" (click)="isReadMore=!isReadMore">
-                  {{ isReadMore ? 'Read More': 'Read Less' }}
+                <p>
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                  <br /><br />
+                  The Hudson New York is located 0.7 mi from Times
+                  Square. The Museum of Modern Art is 0.8 mi away. For
+                  those who would like to enjoy a concert during their
+                  visit to New York, Lincoln Center and Carnegie Hall
+                  are 645 m from the property.
+                  <br /><br />
+
+                </p>
+                <p id="collapseDiv1" class="collapse">
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                </p>
+                <button class="btn btn-primary" type="button" (click)="readMore=(readMore == 1 ? 0 : 1);"
+                  data-bs-toggle="collapse" data-bs-target="#collapseDiv1">
+                  {{ readMore == 1 ? 'Read Less': 'Read More' }}
               </button>
               </div>
 
@@ -33,19 +59,38 @@
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">The discussion of the results</div>
               <div class="stages__item-text">
+                <p>
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                  <br /><br />
+                  The Hudson New York is located 0.7 mi from Times
+                  Square. The Museum of Modern Art is 0.8 mi away. For
+                  those who would like to enjoy a concert during their
+                  visit to New York, Lincoln Center and Carnegie Hall
+                  are 645 m from the property.
+                  <br /><br />
 
-                <!-- <p *ngIf  = "text.length <= wordLimit "{{text}}></p>
-                <p *ngIf  = "text.length  > wordLimit && !showMore "> {{text.substring(0, wordLimit)}}<span (click)=" showMore = true">showMore </span></p>
-                <p *ngIf  = "text.length  > wordLimit && showMore "> {{text}}<span (click)=" showMore = false">show less </span></p>
-             -->
-
-                
-                <p [ngClass]="{'limitTextHeighta': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
-                <button type="button" (click)="isReadMore=!isReadMore">
-                  {{ isReadMore ? 'Read More': 'Read Less' }}
+                </p>
+                <p id="collapseDiv2" class="collapse">
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                </p>
+                <button class="btn btn-primary" type="button" (click)="readMore=(readMore == 2 ? 0 : 2);"
+                  data-bs-toggle="collapse" data-bs-target="#collapseDiv2">
+                  {{ readMore == 2 ? 'Read Less': 'Read More' }}
               </button>
 
-              
+
               </div>
             </div>
           </li>
@@ -54,30 +99,82 @@
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">Parent interview with school principal</div>
               <div class="stages__item-text">
-                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
-                <button type="button" (click)="isReadMore=!isReadMore">
-                  {{ isReadMore ? 'Read More': 'Read Less' }}
+                <p>
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                  <br /><br />
+                  The Hudson New York is located 0.7 mi from Times
+                  Square. The Museum of Modern Art is 0.8 mi away. For
+                  those who would like to enjoy a concert during their
+                  visit to New York, Lincoln Center and Carnegie Hall
+                  are 645 m from the property.
+                  <br /><br />
+
+                </p>
+                <p id="collapseDiv3" class="collapse">
+                  Located within 322 m of Central Park and Columbus
+                  Circle metro station, this boutique hotel features
+                  an interior lobby garden with trees and ivy walls.
+                  Guests can enjoy convenience of concierge services
+                  and a fitness center.<br /><br />Guests can relax
+                  with a game of billiards, or catch up with family
+                  and friends on business center computers
+                </p>
+                <button class="btn btn-primary" type="button" (click)="readMore=(readMore == 3 ? 0 : 3);"
+                  data-bs-toggle="collapse" data-bs-target="#collapseDiv3">
+                  {{ readMore == 3 ? 'Read Less': 'Read More' }}
               </button>
-                
+
                 </div>
             </div>
           </li>
-                <li class="stages__item">
+          <li class="stages__item">
             <div class="stages__item-num aos-init aos-animate" data-aos="fade-down"><span>step</span></div>
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
-              <div class="h2 stages__item-title">Conclusion of an agreement</div>
-              <div class="stages__item-text">
-                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
-                <button type="button" (click)="isReadMore=!isReadMore">
-                  {{ isReadMore ? 'Read More': 'Read Less' }}
-              </button>
-              
-              
-              </div>
-            </div>
-          </li>
+            <div class="h2 stages__item-title">Conclusion of an agreement</div>
+            <div class="stages__item-text">
+              <p>
+                Located within 322 m of Central Park and Columbus
+                Circle metro station, this boutique hotel features
+                an interior lobby garden with trees and ivy walls.
+                Guests can enjoy convenience of concierge services
+                and a fitness center.<br /><br />Guests can relax
+                with a game of billiards, or catch up with family
+                and friends on business center computers
+                <br /><br />
+                The Hudson New York is located 0.7 mi from Times
+                Square. The Museum of Modern Art is 0.8 mi away. For
+                those who would like to enjoy a concert during their
+                visit to New York, Lincoln Center and Carnegie Hall
+                are 645 m from the property.
+                <br /><br />
 
-            </ol>
+              </p>
+              <p id="collapseDiv4" class="collapse">
+                Located within 322 m of Central Park and Columbus
+                Circle metro station, this boutique hotel features
+                an interior lobby garden with trees and ivy walls.
+                Guests can enjoy convenience of concierge services
+                and a fitness center.<br /><br />Guests can relax
+                with a game of billiards, or catch up with family
+                and friends on business center computers
+              </p>
+              <button class="btn btn-primary" type="button" (click)="readMore=(readMore == 4 ? 0 : 4);"
+                data-bs-toggle="collapse" data-bs-target="#collapseDiv4">
+                {{ readMore == 4 ? 'Read Less': 'Read More' }}
+            </button>
+
+
+            </div>
+          </div>
+        </li>
+
+      </ol>
     </div>
    </div>
 

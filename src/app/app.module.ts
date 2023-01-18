@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
+import { EquiryComponent } from './equiry/equiry.component';
+import { CareersComponent } from './careers/careers.component';
+import { StudcornerComponent } from './studcorner/studcorner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ContactComponent } from './contact/contact.component';
     AdmissionComponent,
     NewsComponent,
     GalleryComponent,
-    ContactComponent
+    ContactComponent,
+    EquiryComponent,
+    CareersComponent,
+    StudcornerComponent
   ],
   imports: [
     BrowserModule,

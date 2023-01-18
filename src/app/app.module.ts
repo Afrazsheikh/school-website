@@ -18,6 +18,9 @@ import { EquiryComponent } from './equiry/equiry.component';
 import { CareersComponent } from './careers/careers.component';
 import { StudcornerComponent } from './studcorner/studcorner.component';
 import { FacilityComponent } from './facility/facility.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,14 +35,17 @@ import { FacilityComponent } from './facility/facility.component';
     EquiryComponent,
     CareersComponent,
     StudcornerComponent,
-    FacilityComponent
+    FacilityComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

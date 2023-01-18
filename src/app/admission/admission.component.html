@@ -17,7 +17,15 @@
             <div class="stages__item-num aos-init aos-animate" data-aos="fade-down"><span>step</span></div>
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">
-                Interview or testing</div>
+                Interview or testing
+              </div>
+              <div class="stages__item-text">
+                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
+                <button type="button" (click)="isReadMore=!isReadMore">
+                  {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+              </div>
+
               </div>
           </li>
                   <li class="stages__item">
@@ -25,7 +33,20 @@
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">The discussion of the results</div>
               <div class="stages__item-text">
-                <p>Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>						</div>
+
+                <!-- <p *ngIf  = "text.length <= wordLimit "{{text}}></p>
+                <p *ngIf  = "text.length  > wordLimit && !showMore "> {{text.substring(0, wordLimit)}}<span (click)=" showMore = true">showMore </span></p>
+                <p *ngIf  = "text.length  > wordLimit && showMore "> {{text}}<span (click)=" showMore = false">show less </span></p>
+             -->
+
+                
+                <p [ngClass]="{'limitTextHeighta': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
+                <button type="button" (click)="isReadMore=!isReadMore">
+                  {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+
+              
+              </div>
             </div>
           </li>
           <li class="stages__item">
@@ -33,9 +54,12 @@
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">Parent interview with school principal</div>
               <div class="stages__item-text">
-                <p>Parents' conversation with school director Mikhail Artemovich Sukiasyan. After receiving a positive opinion on the admission of your child to a.</p>
-                  <p>kindergarten or primary school, parents or trustees will have a meeting with the director, at which all necessary questions are clarified in a free</p>
-                  <p>conversation before signing the contract..</p>						</div>
+                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
+                <button type="button" (click)="isReadMore=!isReadMore">
+                  {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+                
+                </div>
             </div>
           </li>
                 <li class="stages__item">
@@ -43,7 +67,13 @@
             <div class="stages__item-content aos-init aos-animate" data-aos="fade-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
               <div class="h2 stages__item-title">Conclusion of an agreement</div>
               <div class="stages__item-text">
-                <p>After a conversation with the director, the last stage remains - signing the contract and paying the tuition fee. After these formalities, the child will</p>						</div>
+                <p [ngClass]="{'limitTextHeight': isReadMore}" [innerHTML]="text">Teachers report test results to deputy directors, they are discussed and analyzed. If all the tests are passed successfully, the management recommends the conclusion of the contract..</p>			
+                <button type="button" (click)="isReadMore=!isReadMore">
+                  {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+              
+              
+              </div>
             </div>
           </li>
 

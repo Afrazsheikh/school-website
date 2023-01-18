@@ -31,7 +31,9 @@ export class HomeComponent implements OnInit {
       delay: 2500,
       disableOnInteraction: false
     },
-    pagination: true,
+    pagination: {
+      clickable: true
+    },
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;

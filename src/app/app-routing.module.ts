@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdmissionComponent } from './admission/admission.component';
+import { CareersComponent } from './careers/careers.component';
 import { ContactComponent } from './contact/contact.component';
+import { EquiryComponent } from './equiry/equiry.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
+import { StudcornerComponent } from './studcorner/studcorner.component';
 
 
 const routes: Routes = [
@@ -13,6 +16,11 @@ const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'news', component: NewsComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'equiry', component: EquiryComponent},
+  {path: 'careers', component: CareersComponent},
+  {path: 'students-corner', component: StudcornerComponent},
+
+
 ];
 
 @NgModule({

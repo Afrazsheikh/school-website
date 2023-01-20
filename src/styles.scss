@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~swiper/swiper-bundle.min.css";
+@import "../fontawesome-6.2.1/scss/fontawesome.scss";
+@import "../fontawesome-6.2.1/scss/solid.scss";
+@import "../fontawesome-6.2.1/scss/brands.scss";
+
+body {
+  counter-reset: myCounter;
+}

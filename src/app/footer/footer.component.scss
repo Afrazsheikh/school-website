@@ -1,0 +1,104 @@
+footer {
+    padding: 25px 0 22px;
+    background: #2B2A29;
+    color: #fff;
+    font-size: 13px;
+}
+
+.wrap {
+    max-width: 1190px;
+}
+.justify-content-lg-between {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.col-lg-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+}
+.col-sm {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.col-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+}
+.d-inline-block {
+    display: inline-block !important;
+}
+.d-lg-block {
+    display: block !important;
+}
+.nav-footer {
+    width: 360px;
+}
+.nav-footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: -10px 0 0 -20px;
+}
+.nav-footer__item {
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 0 20px;
+    color: #fff;
+}
+.nav-footer__link {
+    display: inline-block;
+    font-style: inherit;
+    color: #fff;
+
+
+}
+.ml-sm-0, .mx-sm-0 {
+    margin-left: 0 !important;
+}
+.col-lg-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+}
+nav-footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: -10px 0 0 -20px;
+}
+
+footer .nav-footer .nav-footer__link {
+  text-decoration: none;
+}
+
+footer .nav-footer .nav-footer__link:hover {
+  color: #007bff;
+}

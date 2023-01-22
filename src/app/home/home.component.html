@@ -122,20 +122,14 @@
       <div class="top-block__soc">
         <div class="b-soc">
           <div class="flex-sm-column b-soc__inner">
-            <a class="b-soc__item b-soc__item--vk" href="https://vk.com/generation_vlg">
-              <svg role="img" width="1em" height="1em">
-                <use xlink:href="#si-soc-vk"></use>
-              </svg>
+            <a class="b-soc__item b-soc__item--vk insta" href="https://vk.com/generation_vlg">
+              <i class="fa-brands fa-instagram"></i>
             </a>
-            <a class="b-soc__item b-soc__item--yt" href="https://www.youtube.com/c/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0%D0%9F%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">
-              <svg role="img" width="1em" height="1em">
-                <use xlink:href="#si-soc-yt"></use>
-              </svg>
+            <a class="b-soc__item b-soc__item--yt twitter" href="https://www.youtube.com/c/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0%D0%9F%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">
+              <i class="fa-brands fa-twitter"></i>
             </a>
-                          <a class="b-soc__item b-soc__item--fb" href="https://pokolenie.eljur.ru">
-              <svg role="img" width="1em" height="1em">
-                <use xlink:href="#si-study-apps"></use>
-              </svg>
+            <a class="b-soc__item b-soc__item--fb ytube" href="https://pokolenie.eljur.ru">
+              <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -160,7 +154,7 @@
   </div>
 </section>
 
-<section class="section steps">
+<section id="section-steps" class="section steps">
 	<div class="steps__bg"></div>
 	<ul class="js-scene parallax-scene steps__decor" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
 		<li class="parallax-layer" data-depth="0.3" style="transform: translate3d(-27.9px, 58.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"><i class="steps__particle steps__particle--dot-green aos-init" data-aos="zoom-in" data-aos-delay="700"></i>
@@ -182,35 +176,45 @@
 
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="100">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/icons/section2-num-step1.svg" alt=""></i>
-					<div class="d-flex align-items-center justify-content-center item-step__title">
-						<i class="item-step__num">01</i>
-						<a href="/intellekt.php">Intelligence</a>
+					<i class="item-step__icon"><img src="assets/images/we-care1.png" alt=""></i>
+					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
+            <h3>Our Mission</h3>
+            <p>Educating & Inspiring students to be lifelong learners and motivating them to be creative,
+              Passionate and responsible towards self and society.</p>
+						<!-- <i class="item-step__num">01</i>
+						<a href="/intellekt.php">Intelligence</a> -->
 					</div>
 				</div>
 			</li>
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="200">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/icons/section2-num-step2.svg" alt=""></i>
-					<div class="d-flex align-items-center justify-content-center item-step__title">
-						<i class="item-step__num">02</i>
-						<a href="/art.php">Creation</a>
+					<i class="item-step__icon"><img src="assets/images/we-care2.png" alt=""></i>
+					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
+            <h3>Our Vision</h3>
+            <p>Providing the best educational experience for all students and inspiring them to fulfill
+              their potential as world citizens of tomorrow.</p>
+						<!-- <i class="item-step__num">02</i>
+						<a href="/art.php">Creation</a> -->
 					</div>
 				</div>
 			</li>
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="300">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/icons/section2-num-step3.svg" alt=""></i>
-					<div class="d-flex align-items-center justify-content-center item-step__title">
-						<i class="item-step__num">03</i>
-						<a href="/health.php">Health</a>
+					<i class="item-step__icon"><img src="assets/images/we-care3.png" alt=""></i>
+					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
+            <h3>Our Culture</h3>
+            <p>We believe in cultivating a school culture where kids are encouraged  and helped to
+              follow the 3 ‘R’s—Respect, Responsibility and Righteousness.</p>
+						<!-- <i class="item-step__num">03</i>
+						<a href="/health.php">Health</a> -->
 					</div>
 				</div>
 			</li>
 					</ul>
 
 	</div>
-  <a class="js-scroll-to steps__scroll-down aos-init aos-animate" href="#" data-aos="fade-up" data-aos-delay="2500" data-scroll-to=".steps" data-aos-offset="0">
+  <a class="js-scroll-to steps__scroll-down aos-init aos-animate" data-aos="fade-up" data-aos-delay="2500" data-aos-offset="0"
+    (click)="scrollToSection2()">
     <i class="fa-solid fa-arrow-down"></i>
   </a>
 </section>
@@ -234,7 +238,7 @@
             knowledge, cultural characteristics and interests of their families.<br>
         </div>
 				<div class="b-mission__btn-wrap">
-					<a class="btn btn--blue btn--with-line aos-init" data-aos="new-animation" href="/about/" data-aos-delay="1100">Подробнее</a>
+					<a class="btn btn--blue btn--with-line aos-init" data-aos="new-animation" href="/about/" data-aos-delay="1100">More</a>
 				</div>
 				<a class="responsive-img js-image-popup d-block b-mission__img-wrap aos-init" data-aos="fade-up-right" data-aos-delay="600">
 					<img src="assets/images/section3-img.jpg" alt="" data-object-fit="cover">
@@ -448,7 +452,7 @@
     <h2 class="h1 text-center b-news__title aos-init" data-aos="fade-in" data-aos-duration="500" data-aos-delay="700">News</h2>
     <ul class="row b-news__list">
 
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-up" data-aos-delay="100">
+                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
           <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
             <div class="responsive-img flex-grow-1 item-news__img-wrap">
               <img class="lazyload" src="assets/images/news1.png" alt="" data-object-fit="cover">
@@ -462,7 +466,7 @@
             </div>
           </a>
         </li>
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-up" data-aos-delay="200">
+                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="200">
           <a class="d-flex flex-column item-news" href="/news/s-dnyem-rozhdeniya/">
             <div class="responsive-img flex-grow-1 item-news__img-wrap">
               <img class="lazyload" src="assets/images/news2.jpg" alt="" data-object-fit="cover">
@@ -476,7 +480,7 @@
             </div>
           </a>
         </li>
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-up" data-aos-delay="300">
+                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="300">
           <a class="d-flex flex-column item-news" href="/news/kem-ya-stanu-kogda-vyrastu/">
             <div class="responsive-img flex-grow-1 item-news__img-wrap">
               <img class="lazyload" src="assets/images/news3.png" alt="" data-object-fit="cover">
@@ -583,8 +587,43 @@
 <section class="section b-partners">
   <div class="b-partners__bg"></div>
   <div class="wrap position-relative">
+    <div class="title text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h5>WE WORK HARD TO GIVE TO YOUR CHILD</h5>
+      <h1>A UNIQUE EXPERIENCE</h1>
+    </div>
     <div class="row">
-      <div class="col-md-9 col-lg-10">
+      <div class="col-12 col-md-4 col-lg-4">
+        <div class="exp-info" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
+          <div class="img-cont text-center">
+            <img class="img-fluid" src="assets/images/exp1.png" alt="">
+            <p>Building safe and inviting learning Environments</p>
+          </div>
+
+          <div class="img-cont text-center">
+            <img class="img-fluid" src="assets/images/exp2.png" alt="">
+            <p>Driving the supply of critical learning materials</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <div class="exp-logo" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
+          <img class="img-fluid" src="assets/images/exp-logo.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <div class="exp-info" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
+          <div class="img-cont text-center">
+            <img class="img-fluid" src="assets/images/exp3.png" alt="">
+            <p>Teachers who inspire hope, ignite the imagination, and instill a love of learning.</p>
+          </div>
+
+          <div class="img-cont text-center">
+            <img class="img-fluid" src="assets/images/exp4.png" alt="">
+            <p>Strengthening the capacity of parents to help their children</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-9 col-lg-10">
         <swiper #swiper3 [config]="config3">
           <ng-template swiperSlide>
             <div class="b-partners__slide" style="order: 0; width: 225.75px; margin-right: 20px;">
@@ -654,7 +693,7 @@
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <ul class="js-scene parallax-scene b-partners__decor" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">

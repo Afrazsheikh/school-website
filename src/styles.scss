@@ -7,3 +7,65 @@
 body {
   counter-reset: myCounter;
 }
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  background-color: #4f4f4f;
+  height: 3px;
+  width: 28px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 0;
+  opacity: 1;
+  transition: all 0.35s ease-out;
+  transform-origin: center center;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.b-soc__inner{
+  .insta {
+    color: rgba(188, 42, 141, 1.0);
+  }
+
+  .twitter {
+    color: rgba(29, 161, 242, 1.0);
+  }
+
+  .ytube {
+    color: rgba(255, 0, 0, 1.0);
+  }
+}

@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
   slideNext(){
     this.swiper?.swiperRef.slideNext(1000);
   }
+
   slidePrev(){
     this.swiper?.swiperRef.slidePrev(1000);
   }
@@ -62,6 +63,7 @@ export class HomeComponent implements OnInit {
   slideEduNext(){
     this.swiper2?.swiperRef.slideNext(1000);
   }
+
   slideEduPrev(){
     this.swiper2?.swiperRef.slidePrev(1000);
   }
@@ -69,7 +71,12 @@ export class HomeComponent implements OnInit {
   slidePartNext(){
     this.swiper3?.swiperRef.slideNext(1000);
   }
+
   slidePartPrev(){
     this.swiper3?.swiperRef.slidePrev(1000);
+  }
+
+  scrollToSection2() {
+    document.getElementById("section-steps")?.scrollIntoView();
   }
 }

@@ -69,7 +69,12 @@ export class HomeComponent implements OnInit {
   slidePartNext(){
     this.swiper3?.swiperRef.slideNext(1000);
   }
+
   slidePartPrev(){
     this.swiper3?.swiperRef.slidePrev(1000);
+  }
+
+  scrollToSection2() {
+    document.getElementById("section-steps")?.scrollIntoView();
   }
 }

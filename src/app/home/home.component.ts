@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import SwiperCore, {SwiperOptions, EffectFade, Pagination, Grid} from 'swiper';
+import SwiperCore, {SwiperOptions, EffectFade, Pagination, Grid, Navigation} from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
-SwiperCore.use([EffectFade, Pagination, Grid]);
+SwiperCore.use([EffectFade, Pagination, Grid, Navigation]);
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   config: SwiperOptions = {
     slidesPerView: 1,
+    navigation: false,
     effect: 'fade',
     fadeEffect: {crossFade: true},
     autoplay: {
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
   config2: SwiperOptions = {
     direction: 'vertical',
     autoHeight: true,
+    navigation: false,
     effect: 'fade',
     fadeEffect: {crossFade: true},
     autoplay: {
@@ -37,10 +39,15 @@ export class HomeComponent implements OnInit {
 
   config3: SwiperOptions = {
     slidesPerView: 4,
+    navigation: false,
     grid: {
       rows: 2,
       fill: 'row'
     }
+  }
+
+  modalConfig: SwiperOptions = {
+    navigation: true
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import SwiperCore, {Navigation, SwiperOptions} from 'swiper';
+SwiperCore.use([Navigation]);
+
 
 @Component({
   selector: 'app-gallery',
@@ -6,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
+
+  config: SwiperOptions = {
+    navigation: true
+  }
 
   constructor() { }
 

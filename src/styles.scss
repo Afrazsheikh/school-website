@@ -69,3 +69,62 @@ body {
     color: rgba(255, 0, 0, 1.0);
   }
 }
+
+.modal {
+  position: fixed;
+  width: 100%;
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+  background: unset;
+}
+
+.lightbox-modal .modal-content {
+  background: var(--lightbox);
+}
+.lightbox-modal .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  font-size: 1.2rem;
+  z-index: 10;
+  opacity: 1;
+}
+.lightbox-modal .modal-body {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+.lightbox-modal img {
+  width: auto;
+  max-height: 80vh;
+  max-width: 100%;
+}
+
+.lightbox-modal {
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: #e9ebf7;
+  }
+
+  .swiper-button-prev {
+    left: 60px;
+  }
+
+  .swiper-button-next {
+    right: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lightbox-modal {
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+  }
+}
+

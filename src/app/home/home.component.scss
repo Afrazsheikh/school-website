@@ -74,5 +74,13 @@
   }
 }
 
+.b-gallery {
+  .b-grid__list {
+    .b-grid__item-inner {
+      cursor: pointer;
+    }
+  }
+}
+
 
 

@@ -1,226 +1,157 @@
-<div class="bg_color" data-aos="zoom-in" data-aos-duration="1500">
-  <div class="container">
-      <div class="row pb-5">
-          <div class="col-12 my-md-5 px-0">
-              <h3 class="heading_Txt d-flex align-items-center justify-content-center ">Photo gallery</h3>
-          </div>
-          <div class="col-12">
-              <div class="row mx-auto">
-                  <div class="col px-0 ">
-                      <div class="row mx-auto">
-                          <div class="col-md-12 col-6 images_MainBox mb-3 ">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+<section class="section section--page albums overflow-hidden">
+	<ul class="js-scene parallax-scene albums__decor aos-init aos-animate" data-relative-input="true" data-aos="zoom-out" data-aos-delay="600" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-green"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-purple"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-orange aos-init" data-aos="zoom-in" data-aos-delay="900"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-circle-red aos-init" data-aos="zoom-in" data-aos-delay="500"></i>
+		</li>
+	</ul>
+	<div class="wrap position-relative">
+		<h1 class="h1 text-center mb-4"><span class="albums__title-text aos-init aos-animate" data-aos="new-animation">Photo gallery</span>
+		</h1>
+
+
+
+			<div class="b-grid">
+				<ul class="js-masonry js-gallery b-grid__list js-gallery-box">
+
+          <li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+          <li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+          </li>
+
+
+					<li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+
+
+					<li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="text-center d-flex flex-column justify-content-center b-grid__item-inner b-grid__item-inner--bg-purple" href="javascript:void(0)">
+              <div class="py-2 px-4 p-md-2">
+                <div class="row align-items-center justify-content-center mb-sm-2">
+                  <div class="col-auto col-sm-12 mb-sm-2 b-grid__icon"><i class="fab fa-instagram"></i></div>
+                  <div class="col col-sm-12 text-left text-sm-center d-none d-sm-block">
+                    <div class="b-grid__title">School Instagram page</div>
                   </div>
-                  <div class="col p-0 ">
-                      <div class="row mx-auto">
-                          <div class="col-md-12 col-6 mb-3 images_MainBox custom_heigth">
-                              <div class="row  heigth position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width heigth" src="assets/images/gallery2.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery2.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery2.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 py-5 images_MainBox Instagram_box">
-                              <div class="row position-relative">
-                                  <div class="col-12 pb-md-3 d-flex align-items-center justify-content-center ">
-                                      <i class="bi Instagram_icon bi-instagram"></i>
-                                  </div>
-                                  <div class="text_div d-none d-md-block text-center">
-                                      <p class="m-0   d-flex align-items-center justify-content-center first_txt">
-                                          School Instagram page</p>
-                                      <p class="m-0 py-3 d-flex align-items-center justify-content-center secnd_txt">
-                                          Features original content and lots of photos! </p>
-                                      <button class="btn  go_btn btn-primary">GO</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col px-0 ">
-                      <div class="row mx-auto">
-                          <div class="col-md-12 col-6 mb-3 images_MainBox ">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-12 col-6 mb-3 images_MainBox">
-                              <div class="row position-relative">
-                                  <div class="col-12 zoom_out">
-                                      <img class="width" src="assets/images/gallery1.jpg" alt="">
-                                  </div>
-                                  <div
-                                      class="col-12 d-fle align-items-center justify-content-center eyes_parentDiv position-absolute top-0 bottom-0">
-                                      <div
-                                          class="circle_div d-flex align-items-center justify-content-center rounded-pill">
-                                          <div
-                                              class="icon_div d-flex align-items-center justify-content-center rounded-pill">
-                                              <i class="bi eyes_icon bi-eye"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                </div>
+                <div class="mb-3 d-none d-md-block b-grid__text">Features original content and lots of photos! :)
+                </div>
+                <div class="d-none d-sm-block"><span class="btn btn--blue">Go to</span>
+                </div>
               </div>
-          </div>
+            </a>
+          </li>
+          <li class="b-grid__item aos-init" data-aos="fade-in" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+                <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa fa-eye b-grid__hover-btn"></i>
+            </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	<div class="js-gallery-params" data-url="/local/templates/main/ajax/gallery-load-instagram.php" data-page-count="11" data-page="2" data-all-count="433" data-parent-section="2"></div>
+
+</section>
+
+<!--Lightbox Modal Gallery-->
+<div class="modal lightbox-modal" id="lightbox-modal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        <div class="container-fluid p-0">
+          <swiper [config]="config">
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallery1.jpg" alt="">
+            </ng-template>
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallery2.jpg" alt="">
+            </ng-template>
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallery3.jpg" alt="">
+            </ng-template>
+          </swiper>
+        </div>
       </div>
+    </div>
   </div>
 </div>

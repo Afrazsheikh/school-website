@@ -131,3 +131,20 @@
     animation: none !important;
   }
 }
+@media (max-width: 768px) {
+  .albums__decor {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .albums__i-dot-purple {
+    top: 172px;
+  }
+
+  .albums__i-dot-green {
+    left: auto;
+    right: 10%;
+  }
+}
+

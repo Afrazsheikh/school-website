@@ -42,3 +42,17 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .albums__i-dot-purple {
+    top: 200px;
+    margin-left: 110px;
+  }
+}
+
+@media (min-width: 992px) {
+  .albums__i-dot-purple {
+    margin-left: -50px;
+  }
+}
+

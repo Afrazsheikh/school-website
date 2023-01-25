@@ -20,6 +20,7 @@ import { FacilityComponent } from './facility/facility.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     CareersComponent,
     StudcornerComponent,
     FacilityComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    PublicDisclouserComponent
   ],
   imports: [
     BrowserModule,

@@ -141,18 +141,20 @@
         </div>
         <div class="d-none d-lg-block">
           <p>You can get all the information you are interested in if you send us a message using the feedback form below.</p>
-          <div class="mt-5">
-            <a class="btn btn--blue btn--with-line js-modal aos-init aos-animate" href="/local/templates/main/modals/modal-feedback.php" data-aos="new-animation" data-aos-delay="800">
-            Write to us</a>
-          </div>
+          <div class="pop_Up mt-5">
+            <button class="py-2 height btn_primary px-3 btn_red mt-4 mt-lg-0 font_style  border-0"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">WRITE
+                TO
+                US</button>
+        </div>
         </div>
       </div>
-      <div class="col-md-6 pr-md-5 d-lg-none order-md-1 text-center text-md-left mb-4 mb-md-0">
+      <!-- <div class="col-md-6 pr-md-5 d-lg-none order-md-1 text-center text-md-left mb-4 mb-md-0">
         <p>You can get all the information you are interested in if you send us a message using the feedback form below.</p>
         <div class="mt-4 mt-md-5">
           <a class="btn btn--blue btn--with-line js-modal aos-init aos-animate" href="/local/templates/main/modals/modal-feedback.php" data-aos="new-animation" data-aos-delay="800">
             Write to us</a></div>
-      </div>
+      </div> -->
       <div class="col-md-6 d-lg-none order-md-1">
         <div class="text-center text-md-right b-soc">
           <div class="b-soc__inner">
@@ -172,3 +174,58 @@
     </div>
   </div>
 </section>
+
+
+
+<div class="modal fade hide" id="exampleModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-5">
+      <div class="modal-header">
+
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <span class="modal__bg">
+        <i class="modal__bg-square"></i>
+      </span>
+
+      <span class="modal__decor">
+          <i class="modal__decor-lines"></i>
+          <i class="modal__decor-line-red"> </i>
+          <i class="modal__decor-dot-purple"></i>
+          <i class="modal__decor-dot-green"></i>
+      </span>
+      <div class="position-relative">
+          <div class="text-center modal__title">
+              <h4>Genral Enquiry </h4>
+          </div>
+
+          <form method="post" action="/" id="form-feedback">
+
+              <div class="form-group" >
+                  <input class="form-control" name="userName" placeholder="Your full name *" required="required">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="email" name="userName" placeholder="Your Email *" required="required">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="number" name="phoneNumber" placeholder="Enter phoneNumber *" required="required">
+              </div>
+              <div class="form-group">
+                  <textarea class="form-control" name="userMessage" placeholder="Please enter your Message*"
+                      required="required"></textarea>
+              </div>
+
+              <div class="text-center my-5">
+                  <button class="btn btn-primary" type="submit">Send</button>
+              </div>
+              <div class="js-form-success text-center">
+                  <h6> Thank you, your message has been sent.</h6>
+              </div>
+
+          </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

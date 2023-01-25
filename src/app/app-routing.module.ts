@@ -9,6 +9,7 @@ import { FacilityComponent } from './facility/facility.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
+import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
 import { StudcornerComponent } from './studcorner/studcorner.component';
 
 
@@ -23,6 +24,8 @@ const routes: Routes = [
   {path: 'students-corner', component: StudcornerComponent},
   {path: 'facility', component: FacilityComponent},
   {path: 'AboutUS', component: AboutUsComponent},
+  {path: 'public-disclouser', component: PublicDisclouserComponent},
+
 
 
 

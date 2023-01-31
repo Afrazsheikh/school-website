@@ -1,0 +1,65 @@
+<section class="section section--page albums overflow-hidden">
+	<ul class="js-scene parallax-scene albums__decor aos-init aos-animate" data-relative-input="true" data-aos="zoom-out" data-aos-delay="600" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-green"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-purple"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-dot-orange aos-init" data-aos="zoom-in" data-aos-delay="900"></i>
+		</li>
+		<li class="parallax-layer" data-depth="0.2" style="transform: translate3d(-21.3px, 23.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+			<i class="albums__i-circle-red aos-init" data-aos="zoom-in" data-aos-delay="500"></i>
+		</li>
+	</ul>
+	<div class="wrap position-relative">
+		<h1 class="h1 text-center mb-5"><span class="albums__title-text aos-init aos-animate" data-aos="new-animation">
+      Photo gallery</span>
+		</h1>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 folder" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+        <div class="img-thumbnail">
+          <img class="img-fluid rounded" src="assets/images/gallCard1.jpg" alt="Green coffee cup and saucer filled with a latte">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 folder" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+        <div class="img-thumbnail">
+          <img class="img-fluid rounded" src="assets/images/gallCard1.jpg" alt="Green coffee cup and saucer filled with a latte">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 folder" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+        <div class="img-thumbnail">
+          <img class="img-fluid rounded" src="assets/images/gallCard1.jpg" alt="Green coffee cup and saucer filled with a latte">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Lightbox Modal Gallery-->
+<div class="modal lightbox-modal" id="lightbox-modal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        <div class="container-fluid p-0">
+          <swiper [config]="config">
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallCard1.jpg" alt="">
+            </ng-template>
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallCard2.jpg" alt="">
+            </ng-template>
+            <ng-template swiperSlide>
+              <img class="img-fluid" src="assets/images/gallCard3.jpg" alt="">
+            </ng-template>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

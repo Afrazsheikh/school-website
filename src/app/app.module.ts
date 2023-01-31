@@ -21,6 +21,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
+import { GalleryImagesComponent } from './gallery-images/gallery-images.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PublicDisclouserComponent } from './public-disclouser/public-disclouser
     StudcornerComponent,
     FacilityComponent,
     AboutUsComponent,
-    PublicDisclouserComponent
+    PublicDisclouserComponent,
+    GalleryImagesComponent
   ],
   imports: [
     BrowserModule,

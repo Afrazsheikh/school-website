@@ -21,7 +21,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GalleryImagesComponent } from './gallery-images/gallery-images.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StudcornerComponent,
     FacilityComponent,
     AboutUsComponent,
-    PublicDisclouserComponent
+    PublicDisclouserComponent,
+    GalleryImagesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +47,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SwiperModule,
     HttpClientModule,
     NoopAnimationsModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    FormsModule 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { CareersComponent } from './careers/careers.component';
 import { ContactComponent } from './contact/contact.component';
 import { EquiryComponent } from './equiry/equiry.component';
 import { FacilityComponent } from './facility/facility.component';
+import { GalleryImagesComponent } from './gallery-images/gallery-images.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'admission', component: AdmissionComponent},
   {path: 'gallery', component: GalleryComponent},
+  {path: 'gallery/:id', component: GalleryImagesComponent},
   {path: 'news', component: NewsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'equiry', component: EquiryComponent},

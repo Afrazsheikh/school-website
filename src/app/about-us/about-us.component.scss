@@ -253,6 +253,14 @@ img {
     padding-bottom: 72px;
 }
 
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  box-shadow: none;
+}
+
 .contact-address-box {
     display: flex;
     justify-content: space-between;
@@ -563,7 +571,7 @@ img {
     }
   }
 } */
-.messageIMG{ 
+.messageIMG{
     border: solid;
     border-radius: 50%;
     display: -webkit-box;

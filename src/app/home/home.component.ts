@@ -38,11 +38,20 @@ export class HomeComponent implements OnInit {
   }
 
   config3: SwiperOptions = {
-    slidesPerView: 4,
+    slidesPerView: 3,
     navigation: false,
-    grid: {
-      rows: 2,
-      fill: 'row'
+    spaceBetween: 16,
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      576: {
+        slidesPerView: 2
+      },
+      996: {
+        slidesPerView: 3
+      }
+
     }
   }
 
@@ -53,6 +62,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   @ViewChild('swiper2', { static: false }) swiper2?: SwiperComponent;
   @ViewChild('swiper3', {static: false}) swiper3?: SwiperComponent;
+
 
   constructor() { }
 
@@ -73,11 +83,11 @@ export class HomeComponent implements OnInit {
     this.swiper2?.swiperRef.slidePrev(1000);
   }
 
-  slidePartNext(){
+  slideEventNext(){
     this.swiper3?.swiperRef.slideNext(1000);
   }
 
-  slidePartPrev(){
+  slideEventPrev(){
     this.swiper3?.swiperRef.slidePrev(1000);
   }
 

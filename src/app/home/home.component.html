@@ -524,116 +524,137 @@
 				<div class="b-grid">
 			<ul class="row js-masonry js-gallery b-grid__list">
 
-        <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
-          <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
-            <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/events1.jpg" alt="" data-object-fit="cover">
-            </div>
-            <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">Deepawali</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
-                is celebrated on 13/11/20</div>
-              <div class="d-none d-sm-block item-news__descr">
-                                </div>
-              <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-            </div>
-          </a>
-        </li>
-
-        <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
-          <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
-            <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/events2.jpg" alt="" data-object-fit="cover">
-            </div>
-            <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">Dussehra</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
-                Voxpop International School leaves no stone unturned</div>
-              <div class="d-none d-sm-block item-news__descr">
-                                </div>
-              <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-            </div>
-          </a>
-        </li>
-
-        <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
-          <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
-            <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/events3.jpg" alt="" data-object-fit="cover">
-            </div>
-            <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">Green Day</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
-                Green -a ray of hope Green, the color of growth, life,</div>
-              <div class="d-none d-sm-block item-news__descr">
-                                </div>
-              <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-            </div>
-          </a>
-        </li>
-
-			<!-- <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
-
-        <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
-          <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
-          <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
-          <span class="text-center flex-shrink-0 item-news__content">
-            <p>Diwali is celebrated 13/11/2020</p>
-          </span>
-        </a>
-
-		  </li>
-
-
-			<li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
-        <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
-          <img class="lazyload" src="assets/images/gallery2.jpg" alt="" data-object-fit="cover">
-          <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
-        </a>
-		  </li>
-
-
-			<li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
-        <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
-          <img class="lazyload" src="assets/images/gallery3.jpg" alt="" data-object-fit="cover">
-          <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
-        </a>
-			</li>
-
-
-			<li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -114px;">
-        <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
-          <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
-          <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
-        </a>
-		  </li>
-
-
-      <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -0.000244141px;">
-        <a class="text-center d-flex flex-column justify-content-center b-grid__item-inner b-grid__item-inner--bg-purple" href="">
-          <div class="py-2 px-4 p-md-2">
-            <div class="row align-items-center justify-content-center mb-sm-2">
-              <div class="col-auto col-sm-12 mb-sm-2 b-grid__icon"><i class="fa-brands fa-instagram"></i>
+        <swiper #swiper3 [config]="config3">
+          <ng-template swiperSlide>
+            <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
+              <div class="responsive-img flex-grow-1 item-news__img-wrap">
+                <img class="lazyload" src="assets/images/events1.jpg" alt="" data-object-fit="cover">
               </div>
-              <div class="col col-sm-12 text-left text-sm-center d-none d-sm-block">
-                <div class="b-grid__title">School Instagram page</div>
+              <div class="text-center flex-shrink-0 item-news__content">
+                <time class="item-news__date" datetime="">Deepawali</time>
+                <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
+                  is celebrated on 13/11/20</div>
+                <div class="d-none d-sm-block item-news__descr">
+                                  </div>
+                <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
               </div>
-            </div>
-            <div class="mb-3 d-none d-md-block b-grid__text">Features original content and lots of photos! :)</div>
-            <div class="d-none d-sm-block"><span class="btn btn--blue">Go</span>
-            </div>
-          </div>
-        </a>
-      </li>
+            </a>
+            <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
 
-      <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -114px;">
-        <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
-          <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
-          <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
-        </a>
-      </li> -->
+            </li> -->
+          </ng-template>
 
+          <ng-template swiperSlide>
+            <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
+              <div class="responsive-img flex-grow-1 item-news__img-wrap">
+                <img class="lazyload" src="assets/images/events2.jpg" alt="" data-object-fit="cover">
+              </div>
+              <div class="text-center flex-shrink-0 item-news__content">
+                <time class="item-news__date" datetime="">Dussehra</time>
+                <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
+                  Voxpop International School leaves no stone unturned</div>
+                <div class="d-none d-sm-block item-news__descr">
+                                  </div>
+                <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
+              </div>
+            </a>
+            <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
+
+            </li> -->
+          </ng-template>
+
+          <ng-template swiperSlide>
+            <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
+              <div class="responsive-img flex-grow-1 item-news__img-wrap">
+                <img class="lazyload" src="assets/images/events3.jpg" alt="" data-object-fit="cover">
+              </div>
+              <div class="text-center flex-shrink-0 item-news__content">
+                <time class="item-news__date" datetime="">Green Day</time>
+                <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
+                  Green -a ray of hope Green, the color of growth, life,</div>
+                <div class="d-none d-sm-block item-news__descr">
+                                  </div>
+                <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
+              </div>
+            </a>
+            <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
+
+            </li> -->
+          </ng-template>
+
+          <!-- <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
+
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
+              <span class="text-center flex-shrink-0 item-news__content">
+                <p>Diwali is celebrated 13/11/2020</p>
+              </span>
+            </a>
+
+          </li>
+
+
+          <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery2.jpg" alt="" data-object-fit="cover">
+              <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
+            </a>
+          </li>
+
+
+          <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery3.jpg" alt="" data-object-fit="cover">
+              <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
+            </a>
+          </li>
+
+
+          <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
+            </a>
+          </li>
+
+
+          <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -0.000244141px;">
+            <a class="text-center d-flex flex-column justify-content-center b-grid__item-inner b-grid__item-inner--bg-purple" href="">
+              <div class="py-2 px-4 p-md-2">
+                <div class="row align-items-center justify-content-center mb-sm-2">
+                  <div class="col-auto col-sm-12 mb-sm-2 b-grid__icon"><i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="col col-sm-12 text-left text-sm-center d-none d-sm-block">
+                    <div class="b-grid__title">School Instagram page</div>
+                  </div>
+                </div>
+                <div class="mb-3 d-none d-md-block b-grid__text">Features original content and lots of photos! :)</div>
+                <div class="d-none d-sm-block"><span class="btn btn--blue">Go</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: -114px;">
+            <a class="responsive-img js-gallery-item b-grid__item-inner" data-bs-toggle="modal" data-bs-target="#lightbox-modal">
+              <img class="lazyload" src="assets/images/gallery1.jpg" alt="" data-object-fit="cover">
+              <i class="fa-solid fa-eye b-grid__hover-btn d-flex"></i>
+            </a>
+          </li> -->
+        </swiper>
 		  </ul>
+      <div class="mt-4 mt-md-5 mt-lg-5 top-block__footer">
+        <div class="row align-items-center justify-content-end">
+          <div class="col-md-auto d-flex align-items-center justify-content-center">
+            <button class="top-block__prev" type="button" tabindex="0" role="button" aria-label="Previous slide" (click)="slideEventPrev()">
+              <i class="fa-solid fa-arrow-left"></i><span>Previous</span></button>
+            <button class="top-block__next" type="button" tabindex="0" role="button" aria-label="Next slide" (click)="slideEventNext()">
+              <span>Next</span>
+              <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
 		</div>
 	</div>
 </section>

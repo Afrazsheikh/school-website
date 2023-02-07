@@ -38,82 +38,19 @@
           This section contains all the latest and hottest news!
         </p>
         <br>
-    <h3> <a href="https://www.notion.so/schoolgeneration/1-ccf8c752cb7342d497dbf832fc41a2e6" target="_blank">School menu</a> </h3>				</div>
+    </div>
    </div>
     <ul class="row articles__list js-news-box">
-    <li class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
+    <li *ngFor="let slide of schoolData" class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
     <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
       <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news1.png" alt="" data-object-fit="cover">
+        <img class="lazyload" [src]="environment.imageBaseUrl + slide.img" alt="" data-object-fit="cover">
       </div>
       <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">26 December 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="Competition for high school students &quot;Russian School of Pharmacists&quot;" style="overflow-wrap: break-word;">Competition for high school students "Russian School of Pharmacists"</div>
-        <div class="d-none d-sm-block item-news__descr"></div>
-        <div class="d-none d-sm-block item-news__more-link">More</div>
-      </div>
-    </a>
-  </li>
-    <li class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/s-dnyem-rozhdeniya/">
-      <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news2.jpg" alt="" data-object-fit="cover">
-      </div>
-      <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">27 October 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="Happy birthday!" style="overflow-wrap: break-word;">Happy birthday!</div>
-        <div class="d-none d-sm-block item-news__descr"></div>
-        <div class="d-none d-sm-block item-news__more-link">More</div>
-      </div>
-    </a>
-  </li>
-    <li class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/kem-ya-stanu-kogda-vyrastu/">
-      <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news3.png" alt="" data-object-fit="cover">
-      </div>
-      <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">25 October 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="What will I be when I grow up?" style="overflow-wrap: break-word;">What will I be when I grow up?</div>
-        <div class="d-none d-sm-block item-news__descr"></div>
-        <div class="d-none d-sm-block item-news__more-link">More</div>
-      </div>
-    </a>
-  </li>
-    <li class="col-sm-6 col-lg-4 articles__item aos-init" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/s-kazhdym-dnyem-kosmos-vsye-blizhe/">
-      <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news1.png" alt="" data-object-fit="cover">
-      </div>
-      <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">6 October 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="Space is getting closer every day!" style="overflow-wrap: break-word;">Space is getting closer every day!</div>
-        <div class="d-none d-sm-block item-news__descr"></div>
-        <div class="d-none d-sm-block item-news__more-link">More</div>
-      </div>
-    </a>
-  </li>
-    <li class="col-sm-6 col-lg-4 articles__item aos-init" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/den-uchitelya-v-pokolenie/">
-      <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news2.jpg" alt="" data-object-fit="cover">
-      </div>
-      <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">5 October 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="Teacher's Day in the Generation!" style="overflow-wrap: break-word;">Teacher's Day in the Generation!</div>
-        <div class="d-none d-sm-block item-news__descr"></div>
-        <div class="d-none d-sm-block item-news__more-link">More</div>
-      </div>
-    </a>
-  </li>
-    <li class="col-sm-6 col-lg-4 articles__item aos-init" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/sayt-na-sayte/">
-      <div class="responsive-img flex-grow-1 item-news__img-wrap">
-        <img class="lazyload" src="assets/images/news3.png" alt="" data-object-fit="cover">
-      </div>
-      <div class="text-center flex-shrink-0 item-news__content">
-        <time class="item-news__date" datetime="">6 September 2022</time>
-        <div class="dot d-flex align-items-center justify-content-center item-news__title" title="Site on site!" style="overflow-wrap: break-word;">Site on site!</div>
+        <time class="item-news__date" datetime="">{{slide.newsDate}}</time>
+        <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
+          {{slide.heading}}
+        </div>
         <div class="d-none d-sm-block item-news__descr"></div>
         <div class="d-none d-sm-block item-news__more-link">More</div>
       </div>

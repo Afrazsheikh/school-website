@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { ApiService } from 'src/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about-us',
@@ -18,9 +20,25 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  environment = environment;
+  isLoading: boolean;
+  schoolData: any;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getSchoolData();
+  }
+
+  getSchoolData()
+  {
+    this.apiService.getSchoolData('aboutUs').subscribe((resp) => {
+      this.schoolData = resp.schoolData.aboutUs;
+      console.log(this.schoolData);
+    },
+    (err) => {
+      console.error(err);
+    });
   }
 
 }

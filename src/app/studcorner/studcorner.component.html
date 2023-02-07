@@ -29,7 +29,7 @@
 		</i>
 	</span>
 	<div class="wrap position-relative">
-		<h1 class="h1 mb-4 projects__title">Projects</h1>
+		<h1 class="h1 mb-4 projects__title">{{schoolData?.mainTitle}}</h1>
 		<!-- <div class="row mb-5">
 			<div class="col-lg-8">
 			</div>
@@ -40,19 +40,15 @@
 					<div class="row">
 						<div class="col-md-5 col-lg-6 item-projects__col-1">
 							<a class="responsive-img item-projects__img-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-								<img class="lazyload" src="assets/images/studc1.jpg" alt="" data-object-fit="cover">
+								<img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img1" alt="" data-object-fit="cover">
 							</a>
 						</div>
 						<div class="col-md-7 col-lg-6 align-self-center align-self-lg-stretch item-projects__col-2">
 							<div class="item-projects__content">
-								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/pokolenie-vybiraet-chtenie/">"Generation" chooses reading"</a>
+								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/pokolenie-vybiraet-chtenie/">{{schoolData?.title1}}</a>
 								</div>
 								<div class="mb-4 item-projects__text">
-                  Since 2015, our school has been a regional branch of the Russian Reading Association (RACh).
-
-                  This is a non-profit public organization that brings together reading enthusiasts and specialists in
-                  various fields of knowledge: teachers and librarians, psychologists and sociologists of reading, journalists,
-                  publishers, etc.<br>
+                  {{schoolData?.desc1}}<br>
                 </div>
 								<a class="item-projects__more-link" href="/vnutrennie-proekty-shkoly/pokolenie-vybiraet-chtenie/">To learn more</a>
 							</div>
@@ -66,19 +62,15 @@
 					<div class="row">
 						<div class="col-md-5 col-lg-6 item-projects__col-1">
 							<a class="responsive-img item-projects__img-wrap aos-init aos-animate" href="/vnutrennie-proekty-shkoly/pisma-direktora/" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-								<img class="lazyload" src="assets/images/studc2.jpg" alt="" data-object-fit="cover">
+								<img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img2" alt="" data-object-fit="cover">
 							</a>
 						</div>
 						<div class="col-md-7 col-lg-6 align-self-center align-self-lg-stretch item-projects__col-2">
 							<div class="item-projects__content">
-								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/pisma-direktora/">Director's letters</a>
+								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/pisma-direktora/">{{schoolData?.title2}}</a>
 								</div>
 								<div class="mb-4 item-projects__text">
-                  This project is another attempt to establish a stable and convenient communication channel.
-
-                This is a regular monthly mailing list in which Mikhail Artyomovich highlights issues that are
-                important for parents and the school administration.
-                Feedback and constructive suggestions are always welcome!</div>
+                  {{schoolData?.desc2}}</div>
 								<a class="item-projects__more-link" href="/vnutrennie-proekty-shkoly/pisma-direktora/">To learn more</a>
 							</div>
 						</div>
@@ -91,19 +83,15 @@
 					<div class="row">
 						<div class="col-md-5 col-lg-6 item-projects__col-1">
 							<a class="responsive-img item-projects__img-wrap aos-init" href="/vnutrennie-proekty-shkoly/proforietatsionnaya-rabota/" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-								<img class="lazyload" src="assets/images/studc3.jpg" alt="" data-object-fit="cover">
+								<img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img3" alt="" data-object-fit="cover">
 							</a>
 						</div>
 						<div class="col-md-7 col-lg-6 align-self-center align-self-lg-stretch item-projects__col-2">
 							<div class="item-projects__content">
-								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/proforietatsionnaya-rabota/">Career guidance project "School University"</a>
+								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/proforietatsionnaya-rabota/">{{schoolData?.title3}}</a>
 								</div>
 								<div class="mb-4 item-projects__text">
-                  Usually, when they hear about "career guidance work", they remember countless tests and conclusions
-                  like "you are a human sign system."
-
-                  We decided that we should not limit ourselves to tests alone (although they are also important!)
-                  and improved the career guidance system for our high school students.</div>
+                  {{schoolData?.desc3}}</div>
 								<a class="item-projects__more-link" href="/vnutrennie-proekty-shkoly/proforietatsionnaya-rabota/">To learn more</a>
 							</div>
 						</div>
@@ -116,14 +104,14 @@
 					<div class="row">
 						<div class="col-md-5 col-lg-6 item-projects__col-1">
 							<a class="responsive-img item-projects__img-wrap aos-init" href="/vnutrennie-proekty-shkoly/kind-chool/" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-								<img class="lazyload" src="assets/images/studc4.jpg" alt="" data-object-fit="cover">
+								<img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img4" alt="" data-object-fit="cover">
 							</a>
 						</div>
 						<div class="col-md-7 col-lg-6 align-self-center align-self-lg-stretch item-projects__col-2">
 							<div class="item-projects__content">
-								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/kind-chool/">School of Good Deeds</a>
+								<div class="mb-3 item-projects__title"><a href="/vnutrennie-proekty-shkoly/kind-chool/">{{schoolData?.title4}}</a>
 								</div>
-								<div class="mb-4 item-projects__text">The School of Good Deeds is a charitable project of the "Generation" school, which makes it possible to educate children in humanity and a good attitude towards the world.</div>
+								<div class="mb-4 item-projects__text">{{schoolData?.desc4}}</div>
 								<a class="item-projects__more-link" href="/vnutrennie-proekty-shkoly/kind-chool/">To learn more</a>
 							</div>
 						</div>

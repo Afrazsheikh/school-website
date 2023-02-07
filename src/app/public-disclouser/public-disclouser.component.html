@@ -94,38 +94,38 @@
           <tr>
             <th scope="row">2</th>
             <td>COPIES OF SOCITIES/TRUST/COMPANY REGISTRATION/RENEWAL CERTIFICATE AS APPLICABLE	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.trustDoc" target="_blank"> Click Here </a></td>
 
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>COPY OF NO OBJECTION CERTIFICATE (NOC) ISSUED IF APPLICABLE BY THE STATE GOVT/UT	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.nocDoc" target="_blank"> Click Here </a></td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>COPIES OF RECOGNISITION CERTIFICATE UNDER RTE ACT. 2009. AND IT’S RENEWAL IF APPLICABLE	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.recogDoc" target="_blank"> Click Here </a></td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td>COPY OF VALID BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE	COPY OF NO OBJECTION CERTIFICATE (NOC) ISSUED IF APPLICABLE BY THE STATE GOVT/UT	</td>
-            <td><a href=#> Click Here </a></td>
+            <td>COPY OF VALID BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE	</td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.buildingDoc" target="_blank"> Click Here </a></td>
           </tr>
           <tr>
             <th scope="row">6</th>
             <td>COPY OF VALID FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.fireDoc" target="_blank"> Click Here </a></td>
           </tr>
           <tr>
             <th scope="row">7</th>
             <td>COPY OF THE DEO CERTIFICATE SUBMITTED BY THE SCHOOL FOR AFFILIATION/UPGRADATION/EXTENSION OF AFFILIATION SELF CERTIFICATION BY SCHOOL	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.deoDoc" target="_blank"> Click Here </a></td>
           </tr>
           <tr>
             <th scope="row">8</th>
             <td>COPIES OF VALID WATER, HEALTH AND SANITATION CERTIFICATES	</td>
-            <td><a href=#> Click Here </a></td>
+            <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.healthDoc" target="_blank"> Click Here </a></td>
           </tr>
         </tbody>
       </table>
@@ -163,23 +163,23 @@
             <tr>
               <th scope="row">2</th>
               <td>ANNUAL ACADEMIC CALENDER		</td>
-              <td><a href=#> Click Here </a></td>
+              <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.trustDoc" target="_blank"> Click Here </a></td>
 
             </tr>
             <tr>
               <th scope="row">3</th>
               <td>LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)	</td>
-              <td><a href=#> Click Here </a></td>
+              <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.smcDoc" target="_blank"> Click Here </a></td>
             </tr>
             <tr>
               <th scope="row">4</th>
               <td>LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS		</td>
-              <td><a href=#> Click Here </a></td>
+              <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.ptaDoc" target="_blank"> Click Here </a></td>
             </tr>
             <tr>
               <th scope="row">5</th>
               <td>LAST THREE YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABILITY	</td>
-              <td><a href=#> Click Here </a></td>
+              <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.resultDoc" target="_blank"> Click Here </a></td>
             </tr>
 
           </tbody>
@@ -281,17 +281,17 @@
                 <tr>
                   <th scope="row">3</th>
                   <td>LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)	</td>
-                  <td><a href=#> Click Here </a></td>
+                  <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.trustDoc" target="_blank"> Click Here </a></td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
                   <td>LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS		</td>
-                  <td><a href=#> Click Here </a></td>
+                  <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.trustDoc" target="_blank"> Click Here </a></td>
                 </tr>
                 <tr>
                   <th scope="row">5</th>
                   <td>LAST THREE YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABILITY	</td>
-                  <td><a href=#> Click Here </a></td>
+                  <td><a *ngIf="schoolData" [href]="environment.documentUrl + schoolData.trustDoc" target="_blank"> Click Here </a></td>
                 </tr>
 
               </tbody>

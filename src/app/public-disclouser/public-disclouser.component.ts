@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { ApiService } from 'src/services/api.service';
 
 @Component({
   selector: 'app-public-disclouser',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicDisclouserComponent implements OnInit {
 
-  constructor() { }
+  schoolData: any;
+  environment = environment;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getSchoolData();
+  }
+
+  getSchoolData()
+  {
+    this.apiService.getSchoolData('documents').subscribe((resp) => {
+      this.schoolData = resp.schoolData.documents;
+      console.log(this.schoolData);
+    },
+    (err) => {
+      console.error(err);
+    });
   }
 
 }

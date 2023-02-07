@@ -34,7 +34,7 @@
             <div class="sec-title-style1 text-center max-width">
                 <div class="text d-flex align-items-center justify-content-center">
                     <div class="decor-left"><span></span></div>
-                    <p class="coustom_text">Careers
+                    <p class="coustom_text">{{schoolData?.mainTitle}}
                     </p>
                     <div class="decor-right"><span></span></div>
                 </div>
@@ -43,12 +43,7 @@
         <div class="row mx-auto position-relative overflow-hidden box_shadow px-3 mb-md-5">
             <div class="col-12 col-md-6 col-lg-6 sec-title-style1 pb-3">
                 <div class="bottom-text">
-                    <p>Our Uniqueness lies in high levels of achievements in academic and extra-curricular
-                        activities. In
-                        every area of school life, we hopefully engage our students in the business of learning,
-                        giving them
-                        the opportunity to meet challenges and make their own discoveries successfully.
-                    </p>
+                    <p>{{schoolData?.description}}</p>
                 </div>
                 <div class="pop_Up mt-5">
                     <button class="py-2 btn btn-outline-primary px-3 mt-4 mt-lg-0"
@@ -60,7 +55,7 @@
             </div>
             <div class="col-12 col-md-4 col-lg-4 position-relative mx-auto">
                 <div class="image_box">
-                    <img class="img-fluid height_width" src="../../assets/images/careersImg.jpg" alt="">
+                    <img class="img-fluid height_width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img" alt="">
                 </div>
             </div>
         </div>

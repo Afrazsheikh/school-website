@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ApiService } from 'src/services/api.service';
 import SwiperCore, {SwiperOptions, EffectFade, Pagination, Grid, Navigation} from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
+import { environment } from 'src/environments/environment';
 
 SwiperCore.use([EffectFade, Pagination, Grid, Navigation]);
 
@@ -10,6 +12,10 @@ SwiperCore.use([EffectFade, Pagination, Grid, Navigation]);
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  environment = environment;
+  isLoading: boolean;
+  schoolData: any;
 
   config: SwiperOptions = {
     slidesPerView: 1,
@@ -51,7 +57,6 @@ export class HomeComponent implements OnInit {
       996: {
         slidesPerView: 3
       }
-
     }
   }
 
@@ -64,9 +69,10 @@ export class HomeComponent implements OnInit {
   @ViewChild('swiper3', {static: false}) swiper3?: SwiperComponent;
 
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getSchoolData();
   }
 
   slideNext(){
@@ -93,5 +99,16 @@ export class HomeComponent implements OnInit {
 
   scrollToSection2() {
     document.getElementById("section-steps")?.scrollIntoView();
+  }
+
+  getSchoolData()
+  {
+    this.apiService.getSchoolData().subscribe((resp) => {
+      this.schoolData = resp.schoolData;
+      console.log(this.schoolData);
+    },
+    (err) => {
+      console.error(err);
+    });
   }
 }

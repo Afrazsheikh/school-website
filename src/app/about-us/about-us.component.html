@@ -16,7 +16,7 @@
 
   <div class="wrap position-relative">
     <div class="content-style mt-3">
-      <h1 class="h1">About school</h1>
+      <h1 class="h1">{{schoolData?.mainTitle}}</h1>
     </div>
   </div>
 
@@ -63,20 +63,13 @@
       <div class="container">
           <div class="row mx-auto py-2">
               <div class="col-md-6 col-12 text-center">
-                  <img class="image__div width" src="../../assets/images/section3-video.jpg" alt="">
+                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img1" alt="">
               </div>
               <div
                   class="col-12 pt-3 col-md-6 d-flex d-md-block align-items-center flex-column justify-content-center ">
-                  <h1 class="fw-bold mb-0 heading_txt">Our History and <br class="d-none d-md-block">Core Values</h1>
-                  <p class="pt-2 p__text text-md-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-
-                      libero incidunt repellat.</p>
-                  <p class="p__text text-md-start text-center">Lorem ipsum dolor sng
-                      elit. Reiciendis error
-                      officiis quos odio, amet
-                      excepturi? Error, nihil reiciend.</p>
+                  <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title1}}</h1>
+                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc1}}</p>
                   <div class="btn-div text-md-start text-center mt-4">
-
                       <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">Message
                     </button>
@@ -97,15 +90,8 @@
                           FREE PRIVATE SCHOOL
                       </button> -->
                   </div>
-                  <h1 class="fw-bold mb-0 heading_txt">Our History and <br class="d-none d-md-block">Core Values</h1>
-                  <p class="pt-2 p__text text-md-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Reiciendis error
-                      officiis quos odio, amet
-                    </p>
-                  <p class="p__text text-md-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Reiciendis error
-                    , nihil reiciend.</p>
-
+                  <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title2}}</h1>
+                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc2}}</p>
                     <div class="mt-4">
                       <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
                         data-bs-toggle="modal" data-bs-target="#exampleModalthree">Message
@@ -113,7 +99,7 @@
                     </div>
               </div>
               <div class="col-md-6 col-12 order-1 order-md-2 text-center">
-                  <img class="image__div width" src="../../assets/images/section3-video.jpg" alt="">
+                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img2" alt="">
               </div>
           </div>
       </div>
@@ -130,27 +116,17 @@
                           FREE PRIVATE SCHOOL
                       </button> -->
                   </div>
-                  <h1 class="fw-bold mb-0 heading_txt">Our History and <br class="d-none d-md-block">Core Values</h1>
-                  <p class="pt-2 p__text text-md-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Reiciendis error
-                      officiis quos odio, amet
-                      excepturi? Error, nihil reiciendis assumenda autem animi ducimus adipisci itaque beatae minima
-                      dicta
-                      libero incidunt repellat.</p>
-                  <p class="p__text text-md-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Reiciendis error
-                      officiis quos odio, amet
-                      excepturi? Error, nihil reiciend.</p>
+                  <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title3}}</h1>
+                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc3}}</p>
                       <!-- here second model -->
                       <div class="btn-div text-md-start text-center mt-4">
-
                         <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
                         data-bs-toggle="modal" data-bs-target="#exampleModaltwo">Message
                       </button>
                     </div>
               </div>
               <div class="col-md-6 order-1 col-12 text-center">
-                  <img class="image__div width" src="../../assets/images/section3-video.jpg" alt="">
+                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img3" alt="">
               </div>
           </div>
 

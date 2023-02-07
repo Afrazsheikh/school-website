@@ -95,10 +95,10 @@
           Contacts
         </h1>
         <div class="my-4 my-md-5 text-center text-md-left">
-          <p>Volgograd, st. Tkacheva, d. 7</p>
-          <p><a href="tel:39-19-67">39-19-67</a> (secretary, reception),</p>
-          <p><a href="tel:37-47-17">37-47-17</a> (security),</p>
-          <p><a href="mailto:school_pokolenie@mail.ru">school_pokolenie@mail.ru</a></p>
+          <p>{{apiService.address?.street + ', ' + apiService.address?.city + ', ' +apiService.address?.state + ', ' +
+            apiService.address?.country + ', ' + apiService.address?.pincode}}</p>
+          <p><a href="tel:39-19-67">{{apiService.phone}}</a></p>
+          <p><a href="mailto:school_pokolenie@mail.ru">{{apiService.email}}</a></p>
         </div>
         <div class="d-none d-lg-block b-soc">
           <div class="b-soc__inner">

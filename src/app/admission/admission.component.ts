@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ApiService } from 'src/services/api.service';
 
 @Component({
   selector: 'app-admission',
@@ -8,12 +9,23 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AdmissionComponent implements OnInit {
 
   readMore: number = 0;
+  schoolData: any;
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
+    this.getSchoolData();
   }
 
-
+  getSchoolData()
+  {
+    this.apiService.getSchoolData('admission').subscribe((resp) => {
+      this.schoolData = resp.schoolData.admission;
+      console.log(this.schoolData);
+    },
+    (err) => {
+      console.error(err);
+    });
+  }
 }
 

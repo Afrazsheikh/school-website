@@ -8,13 +8,13 @@
   <div class="wrap">
     <div class="position-relative">
       <swiper #swiper [config]="config">
-        <ng-template swiperSlide>
+        <ng-template *ngFor="let slide of schoolData?.section1" swiperSlide>
           <div class="row flex-xl-nowrap">
             <div class="col-auto order-lg-1">
               <div class="top-block__rhombus rhombus aos-init aos-animate" data-aos="fade-in" data-aos-delay="300">
                 <div class="rhombus__inner">
                   <div class="responsive-img rhombus__img-wrap">
-                    <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper1.jpg" alt="" data-object-fit="cover">
+                    <img class="swiper-lazy swiper-lazy-loaded" [src]="environment.imageBaseUrl + slide.slideImg1" alt="" data-object-fit="cover">
                   </div>
                   <a class="rhombus__text" href="https://pokolenie.eljur.ru">
                     <div class="rhombus__logo">
@@ -23,7 +23,7 @@
                   </a>
                   <div class="rhombus__img-romb">
                     <div class="responsive-img rhombus__img-romb-wrap">
-                      <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper-rhomb1.png" alt="" data-object-fit="cover">
+                      <img class="swiper-lazy swiper-lazy-loaded" [src]="environment.imageBaseUrl + slide.slideImg2" alt="" data-object-fit="cover">
 
                     </div>
                   </div><i class="rhombus__line aos-init aos-animate" data-aos="new-animation" data-aos-delay="1200"></i>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col">
                   <div class="text-center text-md-left top-block__title">
-                    School of your time
+                    {{slide.title}}
                     <i class="d-none d-md-block top-block__title-lines aos-init aos-animate" data-aos="new-animation" data-aos-delay="500"></i>
                     <i class="top-block__title-angle aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700"></i>
                   </div>
@@ -43,80 +43,6 @@
                   </div>
                 </div>
           </div>
-        </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row flex-xl-nowrap">
-            <div class="col-auto order-lg-1">
-              <div class="top-block__rhombus rhombus aos-init aos-animate" data-aos="fade-in" data-aos-delay="300">
-                <div class="rhombus__inner">
-                  <div class="responsive-img rhombus__img-wrap">
-                    <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper2.jpg" alt="" data-object-fit="cover">
-                  </div>
-                  <a class="rhombus__text" href="https://pokolenie.eljur.ru">
-                    <div class="rhombus__logo">
-                      <img src="assets/images/swiper-logo.png" alt="">
-                    </div>
-                  </a>
-                  <div class="rhombus__img-romb">
-                    <div class="responsive-img rhombus__img-romb-wrap">
-                      <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper-rhomb2.jpg" alt="" data-object-fit="cover">
-
-                    </div>
-                  </div><i class="rhombus__line aos-init aos-animate" data-aos="new-animation" data-aos-delay="1200"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="text-center text-md-left top-block__title">
-                A school you don't want to leave
-                <i class="d-none d-md-block top-block__title-lines aos-init aos-animate" data-aos="new-animation" data-aos-delay="500"></i>
-                <i class="top-block__title-angle aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700"></i>
-              </div>
-              <div class="text-center text-md-right text-lg-left">
-                <a class="btn btn--blue btn--with-line top-block__more-btn aos-init aos-animate" data-aos="new-animation" data-aos-delay="2500" href="/">
-                  More
-                </a>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row flex-xl-nowrap">
-									<div class="col-auto order-lg-1">
-										<div class="top-block__rhombus rhombus aos-init aos-animate" data-aos="fade-in" data-aos-delay="300">
-											<div class="rhombus__inner">
-												<div class="responsive-img rhombus__img-wrap">
-													<img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper3.png" alt="" data-object-fit="cover">
-												</div>
-												<a class="rhombus__text" href="https://pokolenie.eljur.ru">
-													<div class="rhombus__logo">
-														<img src="assets/images/swiper-logo.png" alt="">
-													</div>
-												</a>
-												<div class="rhombus__img-romb">
-													<div class="responsive-img rhombus__img-romb-wrap">
-														<img class="swiper-lazy swiper-lazy-loaded" src="assets/images/swiper-rhomb3.jpg" alt="" data-object-fit="cover">
-
-													</div>
-												</div><i class="rhombus__line aos-init aos-animate" data-aos="new-animation" data-aos-delay="1200"></i>
-											</div>
-										</div>
-									</div>
-									<div class="col">
-										<div class="text-center text-md-left top-block__title">
-                      School "Generation" at home
-                      <i class="d-none d-md-block top-block__title-lines aos-init aos-animate" data-aos="new-animation" data-aos-delay="500"></i>
-											<i class="top-block__title-angle aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700"></i>
-										</div>
-										<div class="text-center text-md-right text-lg-left">
-											<a class="btn btn--blue btn--with-line top-block__more-btn aos-init aos-animate" data-aos="new-animation" data-aos-delay="2500" href="/sveden/distant/index.php">
-                        More
-                      </a>
-										</div>
-									</div>
-								</div>
         </ng-template>
       </swiper>
       <div class="top-block__soc">
@@ -166,21 +92,20 @@
 	<div class="wrap steps__inner">
 		<div class="row text-center text-md-left">
 			<div class="col-lg-5">
-				<div class="h1 steps__title">We care</div>
+				<div class="h1 steps__title">{{schoolData?.section2.title}}</div>
 			</div>
 			<div class="col-md-9 ms-md-auto ms-lg-0 col-lg-7">
-				<div class="steps__text">Our school gives its pupils the opportunity not only to develop themselves intellectually, aesthetically and physically, but also to find their own direction in life, to receive a quality education.</div>
+				<div class="steps__text">{{schoolData?.section2.description}}</div>
 			</div>
 		</div>
 				<ul class="row justify-content-center steps__list">
 
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="100">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/images/we-care1.png" alt=""></i>
+					<i class="item-step__icon"><img *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.section2.bottomImage1" alt=""></i>
 					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
-            <h3>Our Mission</h3>
-            <p>Educating & Inspiring students to be lifelong learners and motivating them to be creative,
-              Passionate and responsible towards self and society.</p>
+            <h3>{{schoolData?.section2.bottomText1}}</h3>
+            <p>{{schoolData?.section2.bottomSubText1}}</p>
 						<!-- <i class="item-step__num">01</i>
 						<a href="/intellekt.php">Intelligence</a> -->
 					</div>
@@ -188,11 +113,10 @@
 			</li>
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="200">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/images/we-care2.png" alt=""></i>
+					<i class="item-step__icon"><img *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData?.section2.bottomImage2" alt=""></i>
 					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
-            <h3>Our Vision</h3>
-            <p>Providing the best educational experience for all students and inspiring them to fulfill
-              their potential as world citizens of tomorrow.</p>
+            <h3>{{schoolData?.section2.bottomText2}}</h3>
+            <p>{{schoolData?.section2.bottomSubText2}}</p>
 						<!-- <i class="item-step__num">02</i>
 						<a href="/art.php">Creation</a> -->
 					</div>
@@ -200,11 +124,10 @@
 			</li>
 						<li class="col-6 col-md-3 steps__item aos-init" data-aos="fade-up" data-aos-delay="300">
 				<div class="text-center item-step">
-					<i class="item-step__icon"><img src="assets/images/we-care3.png" alt=""></i>
+					<i class="item-step__icon"><img *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData?.section2.bottomImage3" alt=""></i>
 					<div class="d-flex flex-column align-items-center justify-content-center item-step__title">
-            <h3>Our Culture</h3>
-            <p>We believe in cultivating a school culture where kids are encouraged  and helped to
-              follow the 3 ‘R’s—Respect, Responsibility and Righteousness.</p>
+            <h3>{{schoolData?.section2.bottomText3}}</h3>
+            <p>{{schoolData?.section2.bottomSubText3}}</p>
 						<!-- <i class="item-step__num">03</i>
 						<a href="/health.php">Health</a> -->
 					</div>
@@ -232,21 +155,21 @@
 	<div class="wrap position-relative">
 		<div class="row align-items-start">
 			<div class="col-lg-6 col-xl-4 me-xl-auto position-relative">
-				<h2 class="h1 aos-init" data-aos="fade-up">Our mission</h2>
+				<h2 class="h1 aos-init" data-aos="fade-up">{{schoolData?.section3.title}}</h2>
 				<div class="content-style aos-init" data-aos="fade-up">
-					Find an individual approach to each child in accordance with their personal needs and their level of
-            knowledge, cultural characteristics and interests of their families.<br>
+					{{schoolData?.section3.description}}<br>
         </div>
 				<div class="b-mission__btn-wrap">
 					<a class="btn btn--blue btn--with-line aos-init" data-aos="new-animation" href="/about/" data-aos-delay="1100">More</a>
 				</div>
 				<a class="responsive-img js-image-popup d-block b-mission__img-wrap aos-init" data-aos="fade-up-right" data-aos-delay="600">
-					<img src="assets/images/section3-img.jpg" alt="" data-object-fit="cover">
+					<img *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.section3.img" alt="" data-object-fit="cover">
 				</a>
 			</div>
 			<div class="col-lg-6 b-mission__video">
-				<a class="responsive-img js-popup-youtube b-video b-video--dimmed aos-init" href="https://www.youtube.com/watch?v=BD_bN7uZ75k" data-aos="fade-up" data-aos-delay="100">
-					<img class="lazyload" src="assets/images/section3-video.jpg" alt="" data-object-fit="cover">
+				<a class="responsive-img js-popup-youtube b-video b-video--dimmed aos-init" *ngIf="schoolData"
+          [href]="schoolData?.section3.videoUrl" data-aos="fade-up" data-aos-delay="100">
+					<img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.section3.videoThumb" alt="" data-object-fit="cover">
           <i class="fa-solid fa-play b-video__play-btn d-flex"></i>
 				</a>
 			</div>
@@ -265,29 +188,31 @@
 		<h2 class="h1 mb-5 text-center aos-init" data-aos="fade-up">Educational complex</h2>
 		<div class="b-projects__slider-wrap aos-init" data-aos="new-animation">
       <swiper #swiper2 [config]="config2" class="sec4-swiper">
-        <ng-template swiperSlide>
+        <ng-template *ngFor="let slide of schoolData?.section4" swiperSlide>
           <div class="row">
             <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
-              <div class="h2 d-flex b-projects__sub-title"><span>Preparation for the Olympics</span></div>
+              <div class="h2 d-flex b-projects__sub-title"><span>{{slide.title}}</span></div>
+              <p *ngIf="slide.description?.length && slide.description != 'null'"
+                class="mb-4 dot b-projects__slide-descr" style="overflow-wrap: break-word;">
+                {{slide.description}}
+                <br>
+              </p>
               <p class="mb-4"><a class="b-projects__more-link" href="/projects/podgotovka-k-olimpiadam/">To learn more</a></p>
               <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet active" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
+                <li class="js-projects-bullet active" data-id="1" *ngFor="let slideDesc of schoolData.section4">
+                  {{slideDesc.title}}
+                </li>
               </ul>
             </div>
             <div class="col-lg-6">
               <div class="responsive-img b-projects__img-wrap">
-                <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/sec4-slide1.jpg" alt="" data-object-fit="cover">
+                <img class="swiper-lazy swiper-lazy-loaded" [src]="environment.imageBaseUrl + slide.img" alt="" data-object-fit="cover">
               </div>
             </div>
           </div>
         </ng-template>
 
-        <ng-template swiperSlide>
+        <ng-template *ngIf="!schoolData" swiperSlide>
           <div class="row">
             <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
               <div class="h2 d-flex b-projects__sub-title"><span>Modern High School</span></div>
@@ -309,107 +234,9 @@
             </div>
           </div>
         </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row">
-            <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
-              <div class="h2 d-flex b-projects__sub-title"><span>Psychological center "GENERATION"</span></div>
-              <p class="mb-4"><a class="b-projects__more-link" href="/projects/podgotovka-k-olimpiadam/">To learn more</a></p>
-              <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet active" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <div class="responsive-img b-projects__img-wrap">
-                <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/sec4-slide3.jpg" alt="" data-object-fit="cover">
-
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row">
-            <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
-              <div class="h2 d-flex b-projects__sub-title"><span>«Time2Teach»</span></div>
-              <p class="mb-4 dot b-projects__slide-descr" style="overflow-wrap: break-word;">
-                The Time2Teach project is a new look at school and formal education.
-                A teacher for students should become a guide to life, show how to apply knowledge in
-                practice and teach how to solve real problems, not only educational ones.
-                <br>
-              </p>
-              <p class="mb-4"><a class="b-projects__more-link" href="/projects/podgotovka-k-olimpiadam/">To learn more</a></p>
-              <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet active" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <div class="responsive-img b-projects__img-wrap">
-                <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/sec4-slide4.jpg" alt="" data-object-fit="cover">
-
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row">
-            <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
-              <div class="h2 d-flex b-projects__sub-title"><span>Endowment Fund Legacy Endowment</span></div>
-              <p class="mb-4"><a class="b-projects__more-link" href="/projects/podgotovka-k-olimpiadam/">To learn more</a></p>
-              <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet active" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet" data-id="6">Educational center "Maximum"</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <div class="responsive-img b-projects__img-wrap">
-                <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/sec4-slide5.jpg" alt="" data-object-fit="cover">
-
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
-        <ng-template swiperSlide>
-          <div class="row">
-            <div class="col-lg-6 px-md-5 px-lg-4 order-lg-1">
-              <div class="h2 d-flex b-projects__sub-title"><span>Educational center "Maximum"</span></div>
-              <p class="mb-4"><a class="b-projects__more-link" href="/projects/podgotovka-k-olimpiadam/">To learn more</a></p>
-              <ul class="mb-5 b-projects__links">
-                <li class="js-projects-bullet" data-id="1">Preparation for the Olympics</li>
-                <li class="js-projects-bullet" data-id="2">Modern High School</li>
-                <li class="js-projects-bullet" data-id="3">Psychological center "GENERATION"</li>
-                <li class="js-projects-bullet" data-id="4">«Time2Teach»</li>
-                <li class="js-projects-bullet" data-id="5">Endowment Fund Legacy Endowment</li>
-                <li class="js-projects-bullet active" data-id="6">Educational center "Maximum"</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <div class="responsive-img b-projects__img-wrap">
-                <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/sec4-slide6.jpg" alt="" data-object-fit="cover">
-
-              </div>
-            </div>
-          </div>
-        </ng-template>
       </swiper>
 
-      <div class="row">
+      <div class="row next-prev-btn">
 				<div class="col-md-6">
 					<div class="d-flex align-items-end">
 						<div class="d-flex align-items-center ms-auto ms-md-0">
@@ -452,49 +279,23 @@
     <h2 class="h1 text-center b-news__title aos-init" data-aos="fade-in" data-aos-duration="500" data-aos-delay="700">News</h2>
     <ul class="row b-news__list">
 
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
+      <li *ngFor="let slide of schoolData?.section5"
+        class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
           <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
             <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/news1.png" alt="" data-object-fit="cover">
+              <img class="lazyload" [src]="environment.imageBaseUrl + slide.img" alt="" data-object-fit="cover">
             </div>
             <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">26 December 2022</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">Competition for high school students "Russian School of Pharmacists"</div>
+              <time class="item-news__date" datetime="">{{slide.newsDate}}</time>
+              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
+                {{slide.heading}}
+              </div>
               <div class="d-none d-sm-block item-news__descr">
                                 </div>
               <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
             </div>
           </a>
         </li>
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="200">
-          <a class="d-flex flex-column item-news" href="/news/s-dnyem-rozhdeniya/">
-            <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/news2.jpg" alt="" data-object-fit="cover">
-            </div>
-            <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">27 December 2022</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">Happy birthday!</div>
-              <div class="d-none d-sm-block item-news__descr">
-                                </div>
-              <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-            </div>
-          </a>
-        </li>
-                <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="300">
-          <a class="d-flex flex-column item-news" href="/news/kem-ya-stanu-kogda-vyrastu/">
-            <div class="responsive-img flex-grow-1 item-news__img-wrap">
-              <img class="lazyload" src="assets/images/news3.png" alt="" data-object-fit="cover">
-            </div>
-            <div class="text-center flex-shrink-0 item-news__content">
-              <time class="item-news__date" datetime="">25 October 2022</time>
-              <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">What will I be when I grow up?</div>
-              <div class="d-none d-sm-block item-news__descr">
-                                </div>
-              <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-            </div>
-          </a>
-        </li>
-
     </ul>
     <div class="text-center">
       <a class="btn btn--blue btn--with-line b-news__show-all aos-init" href="/news/" data-aos="new-animation" data-aos-delay="600">All News</a>
@@ -525,15 +326,16 @@
 			<ul class="row js-masonry js-gallery b-grid__list">
 
         <swiper #swiper3 [config]="config3">
-          <ng-template swiperSlide>
+          <ng-template swiperSlide *ngFor="let slide of schoolData?.section6">
             <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
               <div class="responsive-img flex-grow-1 item-news__img-wrap">
-                <img class="lazyload" src="assets/images/events1.jpg" alt="" data-object-fit="cover">
+                <img class="lazyload" [src]="environment.imageBaseUrl + slide.coverImage" alt="" data-object-fit="cover">
               </div>
               <div class="text-center flex-shrink-0 item-news__content">
-                <time class="item-news__date" datetime="">Deepawali</time>
+                <time class="item-news__date" datetime="">{{slide.title}}</time>
                 <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
-                  is celebrated on 13/11/20</div>
+                  {{slide.subTitle}}
+                </div>
                 <div class="d-none d-sm-block item-news__descr">
                                   </div>
                 <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
@@ -663,38 +465,38 @@
   <div class="b-partners__bg"></div>
   <div class="wrap position-relative">
     <div class="title text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-      <h5>WE WORK HARD TO GIVE TO YOUR CHILD</h5>
-      <h1>A UNIQUE EXPERIENCE</h1>
+      <h5>{{schoolData?.section7.title}}</h5>
+      <h1>{{schoolData?.section7.subTitle}}</h1>
     </div>
     <div class="row">
       <div class="col-12 col-md-4 col-lg-4">
         <div class="exp-info" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
           <div class="img-cont text-center">
-            <img class="img-fluid" src="assets/images/exp1.png" alt="">
-            <p>Building safe and inviting learning Environments</p>
+            <img *ngIf="schoolData" class="img-fluid" [src]="environment.imageBaseUrl + schoolData.section7.topLeftImage" alt="">
+            <p>{{schoolData?.section7.topLeftText}}</p>
           </div>
 
           <div class="img-cont text-center">
-            <img class="img-fluid" src="assets/images/exp2.png" alt="">
-            <p>Driving the supply of critical learning materials</p>
+            <img *ngIf="schoolData" class="img-fluid" [src]="environment.imageBaseUrl + schoolData.section7.bottomLeftImage" alt="">
+            <p>{{schoolData?.section7.bottomLeftText}}</p>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-4 col-lg-4">
         <div class="exp-logo" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
-          <img class="img-fluid" src="assets/images/exp-logo.png" alt="">
+          <img *ngIf="schoolData" class="img-fluid" [src]="environment.imageBaseUrl + schoolData.section7.centerImage" alt="">
         </div>
       </div>
       <div class="col-12 col-md-4 col-lg-4">
         <div class="exp-info" data-aos="zoom-out-right" data-aos-delay="100" data-aos-duration="1000">
           <div class="img-cont text-center">
-            <img class="img-fluid" src="assets/images/exp3.png" alt="">
-            <p>Teachers who inspire hope, ignite the imagination, and instill a love of learning.</p>
+            <img *ngIf="schoolData" class="img-fluid" [src]="environment.imageBaseUrl + schoolData.section7.topRightImage" alt="">
+            <p>{{schoolData?.section7.topRightText}}</p>
           </div>
 
           <div class="img-cont text-center">
-            <img class="img-fluid" src="assets/images/exp4.png" alt="">
-            <p>Strengthening the capacity of parents to help their children</p>
+            <img *ngIf="schoolData" class="img-fluid" [src]="environment.imageBaseUrl + schoolData.section7.bottomRightImage" alt="">
+            <p>{{schoolData?.section7.bottomRightText}}</p>
           </div>
         </div>
       </div>

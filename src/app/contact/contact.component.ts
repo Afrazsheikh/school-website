@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';  
+import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
+import { ApiService } from 'src/services/api.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,16 +9,10 @@ import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public apiService: ApiService) { }
 
   ngOnInit(): void {
   }
-
-  // enquiryForm = new FormGroup ({
-  //   number:  new FormControl("")
-
-  // });
-
 
   submitted(){
 

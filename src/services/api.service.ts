@@ -23,4 +23,12 @@ export class ApiService {
       return this.http.get(environment.apiBaseUrl + 'userService/getSchoolData/' + environment.schoolId);
     }
   }
+
+  getAlbums(): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + 'userService/getAlbums');
+  }
+
+  getImagesByAlbum(name: string): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + 'userService/getGalleryByAlbum/' + name);
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import SwiperCore, {Navigation, SwiperOptions} from 'swiper';
-SwiperCore.use([Navigation]);
+import { environment } from 'src/environments/environment';
+import { ApiService } from 'src/services/api.service';
 
 
 @Component({
@@ -10,13 +10,24 @@ SwiperCore.use([Navigation]);
 })
 export class GalleryComponent implements OnInit {
 
-  config: SwiperOptions = {
-    navigation: true
-  }
+  albums: any[] = [];
+  environment = environment;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getAlbums();
+  }
+
+  getAlbums()
+  {
+    this.apiService.getAlbums().subscribe((resp) => {
+      this.albums = resp.albums;
+      console.log(this.albums);
+    },
+    (err) => {
+      console.error(err);
+    });
   }
 
 }

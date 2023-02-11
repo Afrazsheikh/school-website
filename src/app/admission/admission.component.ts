@@ -21,6 +21,7 @@ export class AdmissionComponent implements OnInit {
   {
     this.apiService.getSchoolData('admission').subscribe((resp) => {
       this.schoolData = resp.schoolData.admission;
+      document.getElementsByTagName('ul')[0].style.paddingLeft = '2rem';
       console.log(this.schoolData);
     },
     (err) => {

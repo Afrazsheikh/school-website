@@ -79,6 +79,9 @@
 
 .stages__item-text {
   padding-right: 32px;
+  ul {
+    padding-left: 2rem;
+  }
 }
 
 .moretext {
@@ -146,5 +149,9 @@
     left: auto;
     right: 10%;
   }
+}
+
+ul {
+  padding-left: 2rem;
 }
 

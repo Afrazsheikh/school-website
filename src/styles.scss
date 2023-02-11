@@ -152,4 +152,19 @@ body {
     }
   }
 }
+.stages__item-text {
+  dl, ol, ul, p {
+    margin: 0 0 1rem 0;
+  }
+
+  ol, ul {
+    padding: 0 0 0 2rem;
+  }
+
+  li {
+    list-style-type: disc;
+  }
+}
+
+
 

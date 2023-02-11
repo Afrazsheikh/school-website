@@ -31,4 +31,8 @@ export class ApiService {
   getImagesByAlbum(name: string): Observable<any> {
     return this.http.get(environment.apiBaseUrl + 'userService/getGalleryByAlbum/' + name);
   }
+
+  getNewsById(id: string): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + 'userService/getNewsById/' + environment.schoolId + '?id=' + id);
+  }
 }

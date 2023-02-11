@@ -580,3 +580,20 @@ margin-left: auto;
 max-height: 20vh;
 
 }
+
+.about-data {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.modal-data {
+  max-height: 40vh;
+  overflow: auto;
+}
+
+/* .modal-data::-webkit-scrollbar {
+  display: none;
+} */

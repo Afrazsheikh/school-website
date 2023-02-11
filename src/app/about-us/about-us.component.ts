@@ -23,6 +23,7 @@ export class AboutUsComponent implements OnInit {
   environment = environment;
   isLoading: boolean;
   schoolData: any;
+  viewData: any;
 
   constructor(private apiService: ApiService) { }
 
@@ -39,6 +40,14 @@ export class AboutUsComponent implements OnInit {
     (err) => {
       console.error(err);
     });
+  }
+
+  setViewData(title: string, desc: string, img: string) {
+    this.viewData = {
+      title,
+      desc,
+      img
+    }
   }
 
 }

@@ -68,10 +68,11 @@
               <div
                   class="col-12 pt-3 col-md-6 d-flex d-md-block align-items-center flex-column justify-content-center ">
                   <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title1}}</h1>
-                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc1}}</p>
+                  <p class="pt-2 p__text text-md-start text-center about-data">{{schoolData?.desc1}}</p>
                   <div class="btn-div text-md-start text-center mt-4">
                       <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">Message
+                        (click)="setViewData(schoolData?.title1,schoolData?.desc1,environment.imageBaseUrl + schoolData.img1)"
+                        data-bs-toggle="modal" data-bs-target="#viewModal">Message
                     </button>
                   </div>
               </div>
@@ -91,10 +92,11 @@
                       </button> -->
                   </div>
                   <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title2}}</h1>
-                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc2}}</p>
+                  <p class="pt-2 p__text text-md-start text-center about-data">{{schoolData?.desc2}}</p>
                     <div class="mt-4">
                       <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
-                        data-bs-toggle="modal" data-bs-target="#exampleModalthree">Message
+                        (click)="setViewData(schoolData?.title2,schoolData?.desc2,environment.imageBaseUrl + schoolData.img2)"
+                        data-bs-toggle="modal" data-bs-target="#viewModal">Message
                       </button>
                     </div>
               </div>
@@ -117,11 +119,12 @@
                       </button> -->
                   </div>
                   <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title3}}</h1>
-                  <p class="pt-2 p__text text-md-start text-center">{{schoolData?.desc3}}</p>
+                  <p class="pt-2 p__text text-md-start text-center about-data">{{schoolData?.desc3}}</p>
                       <!-- here second model -->
                       <div class="btn-div text-md-start text-center mt-4">
                         <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
-                        data-bs-toggle="modal" data-bs-target="#exampleModaltwo">Message
+                          (click)="setViewData(schoolData?.title3,schoolData?.desc3,environment.imageBaseUrl + schoolData.img3)"
+                        data-bs-toggle="modal" data-bs-target="#viewModal">Message
                       </button>
                     </div>
               </div>
@@ -132,11 +135,37 @@
 
       </div>
   </section>
+
+  <section class="section__two bg-white py-5">
+    <div class="container">
+        <div class="row mx-auto pt-3">
+            <div
+                class="col-12 pt-3 order-2 order-md-1 col-md-6 d-flex d-md-block align-items-center flex-column justify-content-center ">
+                <div class="btn-div mb-3 order-3 order-md-1 ">
+                    <!-- <button class="border-dark  py-1 px-3 bg-transparent rounded-pill">
+                        FREE PRIVATE SCHOOL
+                    </button> -->
+                </div>
+                <h1 class="fw-bold mb-0 heading_txt">{{schoolData?.title4}}</h1>
+                <p class="pt-2 p__text text-md-start text-center about-data">{{schoolData?.desc4}}</p>
+                  <div class="mt-4">
+                    <button class="py-2 btn btn-outline-primary px-3 mt-lg-0"
+                      (click)="setViewData(schoolData?.title4,schoolData?.desc4,environment.imageBaseUrl + schoolData.img4)"
+                      data-bs-toggle="modal" data-bs-target="#viewModal">Message
+                    </button>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12 order-1 order-md-2 text-center">
+                <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img4" alt="">
+            </div>
+        </div>
+    </div>
+</section>
 </div>
 
 
 <!-- head of principle -->
-<div class="modal fade hide" id="exampleModaltwo">
+<div class="modal fade hide" id="viewModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-5">
         <div class="modal-header">
@@ -155,24 +184,13 @@
         </span>
         <div class="position-relative">
             <div class="text-center modal__title">
-                <h4>Gen Sec Message</h4>
+                <h4>{{viewData?.title}}</h4>
             </div>
 
-
-   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam alias officiis,<br>
-    deleniti vero temporibus exercitationem numquam, nihil eaque neque ex cupiditate itaquebr <br>
-     eligendi iste enim nam quas illo distinctio quaerat!</p>
-
-   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam alias officiis,<br>
-     deleniti vero temporibus exercitationem numquam, nihil eaque neque ex cupiditate itaquebr <br>
-      eligendi iste enim nam quas illo distinctio quaerat!</p>
-      <p>1. sampel </p>
-      <p>1. sampel </p>
-      <p>1. sampel </p>
-      <p>1. tewo </p>
+        <p class="modal-data">{{viewData?.desc}}</p>
 
 
-      <img src="../../assets/images/section3-video.jpg" class="messageIMG" alt="">
+      <img [src]="viewData?.img" class="messageIMG" alt="">
 
 </div>
       </div>

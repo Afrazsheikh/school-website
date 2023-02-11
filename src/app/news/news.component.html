@@ -42,14 +42,14 @@
    </div>
     <ul class="row articles__list js-news-box">
     <li *ngFor="let slide of schoolData" class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
+    <a class="d-flex flex-column item-news" [routerLink]="[slide._id]">
       <div class="responsive-img flex-grow-1 item-news__img-wrap">
         <img class="lazyload" [src]="environment.imageBaseUrl + slide.img" alt="" data-object-fit="cover">
       </div>
       <div class="text-center flex-shrink-0 item-news__content">
         <time class="item-news__date" datetime="">{{slide.newsDate}}</time>
         <div class="dot d-flex align-items-center justify-content-center item-news__title" style="overflow-wrap: break-word;">
-          {{slide.heading}}
+          <p class="news-data">{{slide.heading}}</p>
         </div>
         <div class="d-none d-sm-block item-news__descr"></div>
         <div class="d-none d-sm-block item-news__more-link">More</div>
@@ -58,8 +58,8 @@
   </li>
 </ul>
 
-    <div class="text-center">
-    <a class="btn btn--blue btn--with-line articles__show-all js-news-load aos-init" href="~news-more" data-url="/local/templates/main/ajax/news-load.php" data-page-n="2" data-count-all="59" data-aos="new-animation">More news</a>
-    </div>
+   <!--  <div class="text-center">
+    <a class="btn btn--blue btn--with-line articles__show-all js-news-load aos-init" data-aos="new-animation">More news</a>
+    </div> -->
  </div>
 </section>

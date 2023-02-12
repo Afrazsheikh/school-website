@@ -23,13 +23,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
 import { GalleryImagesComponent } from './gallery-images/gallery-images.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+  
+    
     AdmissionComponent,
     NewsComponent,
     GalleryComponent,
@@ -49,7 +52,10 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
     SwiperModule,
     HttpClientModule,
     NoopAnimationsModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

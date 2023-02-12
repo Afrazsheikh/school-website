@@ -69,7 +69,7 @@
       <div class="modal-header">
 
       </div>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <button type="button" class="btn-close"  id="addEnquiry"  (click)="clearEnquiryData()" data-bs-dismiss="modal" aria-label="Close"></button>
       <span class="modal__bg">
         <i class="modal__bg-square"></i>
       </span>
@@ -82,10 +82,10 @@
       </span>
       <div class="position-relative">
           <div class="text-center modal__title">
-              <h4>WANT TO JOIN US</h4>
+              <h4>feedback</h4>
           </div>
 
-          <form method="post" action="/" id="form-feedback">
+          <form  [formGroup]="FormData" (ngSubmit)="submit()" id="form-feedback">
 
               <div class="form-group">
                   <input class="form-control" name="userName" placeholder="Your Full Name *" required="required">
@@ -102,7 +102,9 @@
               </div>
 
               <div class="text-center my-5">
-                  <button class="btn btn-primary" type="submit">Send</button>
+                <button class="btn btn-primary" [disabled] = "!FormData.valid || isLoading" type="submit">
+                  <span *ngIf="isLoading" class="spinner-border text-light" role="status"></span>
+                  <span *ngIf="!isLoading"> Send</span></button>
               </div>
               <div class="js-form-success text-center">
                   <h6> Thank you, your message has been sent.</h6>

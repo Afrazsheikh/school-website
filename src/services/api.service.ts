@@ -35,4 +35,14 @@ export class ApiService {
   getNewsById(id: string): Observable<any> {
     return this.http.get(environment.apiBaseUrl + 'userService/getNewsById/' + environment.schoolId + '?id=' + id);
   }
+
+//forms
+addEnquiry(postData: any): Observable<any> {
+  return this.http.post(environment.apiBaseUrl + 'userService/addEnquiry', postData);
+}
+
+addfeedback(postData: any): Observable<any> {
+  return this.http.post(environment.apiBaseUrl + 'userService/addfeedback', postData);
+}
+
 }

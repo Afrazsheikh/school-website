@@ -87,25 +87,25 @@
 
           <form  [formGroup]="FormData" (ngSubmit)="submit()" id="form-feedback">
 
-              <div class="form-group">
-                  <input class="form-control" name="userName" placeholder="Your Full Name *" required="required">
-              </div>
-              <div class="form-group">
-                  <input class="form-control" type="email" name="userName" placeholder="Your Email *" required="required">
-              </div>
-              <div class="form-group">
-                  <input class="form-control" type="number" value="91" name="userName" placeholder="Your Contact Number *" required="required">
-              </div>
-              <div class="form-group">
-                  <textarea class="form-control" name="userMessage" placeholder="Please Enter Your Message *"
-                      required="required"></textarea>
-              </div>
+            <div class="form-group" >
+              <input class="form-control" name="userName" placeholder="Your full name *" required="required" formControlName="userName">
+          </div>
+          <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="Your Email *" formControlName="email" required="required">
+          </div>
+          <div class="form-group">
+              <input class="form-control" type="number" name="phoneNumber" placeholder="Enter phoneNumber *" formControlName="phoneNumber" required="required">
+          </div>
+          <div class="form-group">
+              <textarea class="form-control" name="message" formControlName="message" placeholder="Please enter your Message*"
+                  required="required"></textarea>
+          </div>
 
-              <div class="text-center my-5">
-                <button class="btn btn-primary" [disabled] = "!FormData.valid || isLoading" type="submit">
-                  <span *ngIf="isLoading" class="spinner-border text-light" role="status"></span>
-                  <span *ngIf="!isLoading"> Send</span></button>
-              </div>
+          <div class="text-center my-5">
+              <button class="btn btn-primary" [disabled] = "!FormData.valid || isLoading" type="submit">
+          <span *ngIf="isLoading" class="spinner-border text-light" role="status"></span>
+          <span *ngIf="!isLoading"> Send</span></button>
+          </div>
               <div class="js-form-success text-center">
                   <h6> Thank you, your message has been sent.</h6>
               </div>

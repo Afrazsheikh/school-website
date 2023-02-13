@@ -156,7 +156,7 @@
 		<div class="row align-items-start">
 			<div class="col-lg-6 col-xl-4 me-xl-auto position-relative">
 				<h2 class="h1 aos-init" data-aos="fade-up">{{schoolData?.section3.title}}</h2>
-				<div class="content-style aos-init" data-aos="fade-up">
+				<div class="cj ontent-style aos-init" data-aos="fade-up">
 					{{schoolData?.section3.description}}<br>
         </div>
 				<div class="b-mission__btn-wrap">
@@ -327,7 +327,7 @@
 
         <swiper #swiper3 [config]="config3">
           <ng-template swiperSlide *ngFor="let slide of schoolData?.section6">
-            <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
+            <a class="d-flex flex-column item-news" [routerLink] ="['gallery', slide.academicYear.from + '-' + slide.academicYear.to]" data-aos="zoom-out-right" data-aos-delay="100">
               <div class="responsive-img flex-grow-1 item-news__img-wrap">
                 <img class="lazyload" [src]="environment.imageBaseUrl + slide.coverImage" alt="" data-object-fit="cover">
               </div>
@@ -348,7 +348,7 @@
 
           <ng-template swiperSlide>
             <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
-              <div class="responsive-img flex-grow-1 item-news__img-wrap">
+              <!-- <div class="responsive-img flex-grow-1 item-news__img-wrap">
                 <img class="lazyload" src="assets/images/events2.jpg" alt="" data-object-fit="cover">
               </div>
               <div class="text-center flex-shrink-0 item-news__content">
@@ -358,14 +358,14 @@
                 <div class="d-none d-sm-block item-news__descr">
                                   </div>
                 <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
-              </div>
+              </div> -->
             </a>
             <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
 
             </li> -->
           </ng-template>
 
-          <ng-template swiperSlide>
+          <!-- <ng-template swiperSlide>
             <a class="d-flex flex-column item-news" data-aos="zoom-out-right" data-aos-delay="100" href="/news/konkurs-dlya-starsheklassnikov-rossiyskaya-shkola-farmatsevtov/">
               <div class="responsive-img flex-grow-1 item-news__img-wrap">
                 <img class="lazyload" src="assets/images/events3.jpg" alt="" data-object-fit="cover">
@@ -379,10 +379,14 @@
                 <div class="d-none d-sm-block item-news__more-link" data-aos-delay="600">More</div>
               </div>
             </a>
-            <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
+         
+          </ng-template> -->
+
+          <!-- this is 382 line -->
+   <!-- <li class="col-sm-6 col-lg-4 b-news__item aos-init" data-aos="zoom-out-right" data-aos-delay="100">
 
             </li> -->
-          </ng-template>
+          <!--  -->
 
           <!-- <li class="b-grid__item aos-init" data-aos="fade-up" data-aos-duration="600" style="margin-top: 0px;">
 

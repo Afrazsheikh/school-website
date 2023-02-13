@@ -24,7 +24,7 @@ export class CareersComponent implements OnInit {
   ngOnInit(): void {
 
     this.FormData = new FormGroup ({
-      userName : new FormControl(null,[Validators.required] ),
+      name : new FormControl(null,[Validators.required] ),
       email : new FormControl(null ,[Validators.required] ),
       phoneNumber : new FormControl(null ,[Validators.required] ),
       message : new FormControl(null ,[Validators.required] )
@@ -66,7 +66,7 @@ export class CareersComponent implements OnInit {
   }
   pathForm(){
     this.FormData.patchValue({
-      userName: this.data.userName,
+      name: this.data.userName,
       email: this.data.email,
 
       phoneNumber: this.data.phoneNumber,
@@ -81,7 +81,7 @@ export class CareersComponent implements OnInit {
   clearEnquiryData()
   {
     this.FormData.patchValue({
-      userName: null,
+      name: null,
       email: null,
       phoneNumber: null,
       message: null,

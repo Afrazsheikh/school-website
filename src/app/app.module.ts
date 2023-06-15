@@ -25,6 +25,7 @@ import { GalleryImagesComponent } from './gallery-images/gallery-images.componen
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { ToastrModule } from 'ngx-toastr';
     AboutUsComponent,
     PublicDisclouserComponent,
     GalleryImagesComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+ 
   ],
   imports: [
     BrowserModule,

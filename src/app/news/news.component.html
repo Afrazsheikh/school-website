@@ -42,7 +42,7 @@
    </div>
     <ul class="row articles__list js-news-box">
     <li *ngFor="let slide of schoolData" class="col-sm-6 col-lg-4 articles__item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800">
-    <a class="d-flex flex-column item-news" [routerLink]="[slide._id]">
+    <a class="d-flex flex-column item-news" [routerLink]="['news',slide._id]">
       <div class="responsive-img flex-grow-1 item-news__img-wrap">
         <img class="lazyload" [src]="environment.imageBaseUrl + slide.img" alt="" data-object-fit="cover">
       </div>

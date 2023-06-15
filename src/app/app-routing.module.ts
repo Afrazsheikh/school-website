@@ -10,6 +10,7 @@ import { GalleryImagesComponent } from './gallery-images/gallery-images.componen
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+
 import { NewsComponent } from './news/news.component';
 import { PublicDisclouserComponent } from './public-disclouser/public-disclouser.component';
 import { StudcornerComponent } from './studcorner/studcorner.component';
@@ -29,6 +30,8 @@ const routes: Routes = [
   {path: 'facility', component: FacilityComponent},
   {path: 'AboutUS', component: AboutUsComponent},
   {path: 'public-disclouser', component: PublicDisclouserComponent},
+
+
 
 
 

@@ -7,6 +7,9 @@ export const environment = {
   apiBaseUrl: 'http://localhost:3000/api/v1/',
   imageBaseUrl: 'http://localhost:3000/api/v1/uploads/',
   documentUrl: 'http://localhost:3000/api/v1/documents/',
+  // apiBaseUrl: 'http://13.126.126.170/api/v1/',
+  // imageBaseUrl: 'http://13.126.126.170/api/v1/uploads/',
+  // documentUrl: 'http://13.126.126.170/api/v1/documents/',
   socketURL: 'http://localhost:3000',
   schoolId: '63c18768f5d8ca52c4ed3d07'
 };

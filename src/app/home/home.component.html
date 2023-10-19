@@ -327,7 +327,8 @@
 
         <swiper #swiper3 [config]="config3">
           <ng-template swiperSlide *ngFor="let slide of schoolData?.section6">
-            <a class="d-flex flex-column item-news" [routerLink] ="['gallery', slide.academicYear.from + '-' + slide.academicYear.to]" data-aos="zoom-out-right" data-aos-delay="100">
+            <a class="d-flex flex-column item-news" [routerLink] ="['gallery']" data-aos="zoom-out-right" data-aos-delay="100">
+              <!-- slide.academicYear.from + '-' + slide.academicYear.to   -->
               <div class="responsive-img flex-grow-1 item-news__img-wrap">
                 <img class="lazyload" [src]="environment.imageBaseUrl + slide.coverImage" alt="" data-object-fit="cover">
               </div>

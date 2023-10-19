@@ -63,7 +63,11 @@
       <div class="container">
           <div class="row mx-auto py-2">
               <div class="col-md-6 col-12 text-center">
-                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img1" alt="">
+                  <!-- <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img1" alt=""> -->
+                  <div class="responsive-img item-projects__img-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img1" alt="" data-object-fit="cover">
+                  </div>
+                  
               </div>
               <div
                   class="col-12 pt-3 col-md-6 d-flex d-md-block align-items-center flex-column justify-content-center ">
@@ -101,7 +105,11 @@
                     </div>
               </div>
               <div class="col-md-6 col-12 order-1 order-md-2 text-center">
-                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img2" alt="">
+                  <!-- <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img2" alt=""> -->
+                  <div class="responsive-img item-projects__img-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img2" data-object-fit="cover">
+                  </div>
+                  
               </div>
           </div>
       </div>
@@ -129,7 +137,10 @@
                     </div>
               </div>
               <div class="col-md-6 order-1 col-12 text-center">
-                  <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img3" alt="">
+                  <!-- <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img3" alt=""> -->
+                  <div class="responsive-img item-projects__img-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img3" alt="" data-object-fit="cover">
+                  </div>
               </div>
           </div>
 
@@ -156,7 +167,10 @@
                   </div>
             </div>
             <div class="col-md-6 col-12 order-1 order-md-2 text-center">
-                <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img4" alt="">
+                <!-- <img class="image__div width" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img4" alt=""> -->
+                <div class="responsive-img item-projects__img-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                  <img class="lazyload" *ngIf="schoolData" [src]="environment.imageBaseUrl + schoolData.img4"data-object-fit="cover">
+                </div>
             </div>
         </div>
     </div>

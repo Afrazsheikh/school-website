@@ -18,7 +18,22 @@
               <a class="nav-link text-truncate" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-truncate" routerLink="AboutUS" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About Us</a>
+              
+              <!-- <a class="nav-link text-truncate" routerLink="AboutUS"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About Us</a> -->
+              <button class="nav-link text-truncate" routerLinkActive="active"    mat-button [matMenuTriggerFor]="menu">
+                About US
+                <!-- <mat-icon>more_vert</mat-icon> -->
+              </button>
+
+
+              <mat-menu  #menu="matMenu">
+                <button mat-menu-item routerLink="AboutUS" >Head Of Operations </button>
+                <button mat-menu-item routerLink="AboutUS" >Gen.Sec Message</button>
+                <button mat-menu-item> Vice President Message</button>
+                <button mat-menu-item> Treasurer Message</button>
+              </mat-menu>
+              
+
             </li>
             <li class="nav-item">
               <a class="nav-link text-truncate" routerLink="admission" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Admissions</a>

@@ -21,6 +21,9 @@ import { FacilityComponent } from './facility/facility.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+// import { IgxDropDownModule } from 'igniteui-angular';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     SwiperModule,
     HttpClientModule,
     NoopAnimationsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule
+    // IgxDropDownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

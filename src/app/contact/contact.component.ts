@@ -27,7 +27,13 @@ export class ContactComponent implements OnInit {
 
     })
   }
-
+  redirectToMaps(): void {
+    const location = "Aparna+County+Access+Road,+Matrusri+Nagar,+Miyapur,+Hyderabad,+Telangana+500049/@22.2837118,80.0363891,4z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3bcb92166aaaaaab:0x7e5a77c944ca518b!3e0";
+    const mapsURL = `https://www.google.com/maps/dir//${location}`;
+    
+    // Open the link in a new tab/window
+    window.open(mapsURL, '_blank');
+  }
 
   submit()
   {

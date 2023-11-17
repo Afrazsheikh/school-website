@@ -102,12 +102,15 @@
         </div>
         <div class="d-none d-lg-block b-soc">
           <div class="b-soc__inner">
-            <a class="b-soc__item b-soc__item--yt twitter" href="https://www.youtube.com/c/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0%D0%9F%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5">
-              <i class="fa-brands fa-twitter"></i>
+            <a class="b-soc__item b-soc__item--vk insta" href="https://www.instagram.com/voxpopis/">
+              <i class="fa-brands fa-instagram"></i>
             </a>
-            <a class="b-soc__item b-soc__item--fb ytube" href="https://pokolenie.eljur.ru">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
+            <a class="b-soc__item b-soc__item--fb facebook" href="https://www.facebook.com/voxpopis">
+              <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a class="b-soc__item b-soc__item--linkedin linkedin" href="https://www.linkedin.com/company/voxpop-school/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
           </div>
         </div>
       </div>
@@ -121,10 +124,13 @@
         </svg>
         <div class="flex-shrink-0 contacts__map-container">
           <div class="contacts__map" id="map">
-            <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
-              marginheight="0" marginwidth="0"
-              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-              href="https://www.gachacute.com/">Gacha Cute</a></div>
+            <div class="gmap_canvas">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.2595746659536!2d78.36103641012429!3d17.49511809962467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb92166aaaaaab%3A0x7e5a77c944ca518b!2sVoxpop%20International%20School!5e0!3m2!1sen!2sin!4v1699882171614!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <a href="https://www.gachacute.com/">Gacha Cute</a>
+            </div>
+            
+            
+            
           </div>
           <!-- <i class="contacts__map-line contacts__map-line--orange"></i>
           <i class="contacts__map-line contacts__map-line--yellow"></i> -->
@@ -134,7 +140,7 @@
         <div class="text-center text-md-right pl-md-4 pl-lg-0 contacts__route">
           <form class="js-suggest-form" action="">
             <input class="js-suggest form-control contacts__route-input" id="suggest" type="text" placeholder="Please indicate where you are..." required="">
-            <button class="btn btn-outline-primary dir-btn mt-4 mt-lg-0">
+            <button class="btn btn-outline-primary dir-btn mt-4 mt-lg-0" (click)="redirectToMaps()">
               Get directions
             </button>
           </form>
